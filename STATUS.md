@@ -2,8 +2,10 @@
 
 **Study:** SCENDO  
 **Flow:** [`.seal/E2E_FLOW.md`](.seal/E2E_FLOW.md) (generic) · [`E2E_FLOW.md`](E2E_FLOW.md) (this study)  
-**Protocol seal:** **DRAFT — not sealed** (no git SHA, no OSF URL yet)  
-**Current stage:** Analyze **pass** (2026-08-24). **Next:** Unit 00 inventory (no ICI peek; Seal blocker) → human confirm → **Lock** (git SHA + OSF) → Units 01–08.  
+**Protocol seal:** **SEALED 2026-08-24**  
+**Confirmatory git SHA:** `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`)  
+**OSF URL:** not yet (public lock may follow this SHA by a day)  
+**Current stage:** Sealed. **Next:** Unit 00 inventory (no ICI peek) → Units 01–08.  
 **Decision:** none yet (full paper vs atlas-only vs stop)
 
 **External review brief:** [`PLAN.md`](PLAN.md)
@@ -19,6 +21,8 @@
 | 2026-08-24 | External review: residual hatch capped at \|r\| < 0.75; Gate B also requires VIF(ECS) < 3; missing-gene score frozen as available-case mean |
 | 2026-08-24 | Analyze pass: confirmatory artifacts consistent (note below) |
 | 2026-08-24 | Analyze nits applied; Units 01–08 packets written |
+| 2026-08-24 | Human confirmed CLAIMS / KILL / PROTOCOL; seal patches (MS4A1 fallback; Unit 05 tie cascade) |
+| 2026-08-24 | **Protocol sealed** at git SHA `3fbf310870c57247163edca35ed536ade3ea4301` |
 
 ## Analyze (2026-08-24)
 
@@ -32,7 +36,7 @@ Read-only check of `QUESTION.md`, `CLAIMS.md`, `KILL.md`, `PROTOCOL.md`, `PLAN.m
 - Named confound: ECS as B-cell/TLS proxy; Model 1 adjusts B + TLS + CD8.
 - Train/test wall: name primary state in Unit 05 before any ICI phenotype/outcome file.
 - Nine ECS genes, neighbor genes out, B/TLS/CD8 lists identical across PROTOCOL / KILL / PLAN.
-- Gate A: two lineages; non-B r < 0.6 in pooled TCGA and TCGA-BLCA; residual escape only if SD ratio ≥ 0.5 **and** |r| < 0.75; raw score to Gate B; MS4A1 ≥ 10% drops a non-B lineage.
+- Gate A: two lineages; non-B r < 0.6 in pooled TCGA and TCGA-BLCA; residual escape only if SD ratio ≥ 0.5 **and** |r| < 0.75; raw score to Gate B; contamination gene `MS4A1` → `CD19` → `CD79A` (≥ 10% drops a non-B lineage; all three missing ⇒ drop non-B from that dataset).
 - Gate B: logistic response Model 1; pass = CI excludes 1 **and** VIF(ECS) < 3; no cutoff search.
 - Gate C: CNR2 < 1% (no UMAP atlas) vs stop-kill if enzymes also dark and no non-B state.
 - Missing-gene math: available-case mean; denominator = genes present; min 7/9 ECS; never zero-fill.
@@ -52,12 +56,15 @@ Read-only check of `QUESTION.md`, `CLAIMS.md`, `KILL.md`, `PROTOCOL.md`, `PLAN.m
 ## Confirmatory vs exploratory
 
 Until seal: everything is exploratory planning.  
-After seal: Operator runs units; new ideas → `EXPLORE.md` or a dated protocol amendment.
+After seal: Operator runs units; new ideas → `EXPLORE.md` or a dated protocol amendment. **Do not edit CONFIRMATORY fields** in `PROTOCOL.md` / `KILL.md` / `CLAIMS.md` except by dated amendment.
 
 ## Blockers before Seal
 
 - [x] Analyze pass (consistency) recorded below
-- [ ] Unit 00 inventory complete: sources reachable; nine core genes present on IMvigor210 (≤2 missing); exact extract pinned; **no** outcome-vs-ECS plots
-- [ ] Human reads `CLAIMS.md`, `KILL.md`, `PROTOCOL.md` (and `PLAN.md` if using external review) and agrees
-- [ ] Seal date + git SHA + “do not edit confirmatory fields”
+- [x] Human reads `CLAIMS.md`, `KILL.md`, `PROTOCOL.md` and agrees
+- [x] Seal date + git SHA + “do not edit confirmatory fields” (`3fbf310870c57247163edca35ed536ade3ea4301`)
 - [ ] OSF secondary-data prereg URL (public lock; may follow git SHA by a day)
+
+## After seal (execution)
+
+- [ ] Unit 00 inventory complete: sources reachable; nine core genes present on IMvigor210 (≤2 missing); exact extract pinned; scRNA contamination genes recorded; **no** outcome-vs-ECS plots
