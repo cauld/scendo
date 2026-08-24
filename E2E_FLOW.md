@@ -5,7 +5,7 @@ This page is the **SCENDO instantiation** (units, datasets, Decide branches).
 
 Chat shorthand: **Explore → Question → Kill → Protocol → Clarify → Analyze → Seal (OSF) → Unit → Run → Converge → Decide → Archive.**
 
-**You are here:** see `STATUS.md`. Analyze **pass**; **not locked.** Next: Unit 00 (no peek) → human confirm → Seal (git + OSF) → Units 01–08.  
+**You are here:** see `STATUS.md`. Protocol **sealed** (SHA in STATUS). Next: Unit 00 (no peek) → Units 01–08. OSF prereg may follow the git SHA by a day.  
 Do not start Unit 06 until Unit 05 is done and the protocol is sealed.
 
 ---

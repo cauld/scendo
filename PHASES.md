@@ -11,8 +11,8 @@ Generic loop: [`.seal/E2E_FLOW.md`](.seal/E2E_FLOW.md). Study instantiation: [`E
 | 0.3 | Protocol | `PROTOCOL.md` |
 | 0.4 | Clarify | **Done 2026-08-24**; **patched** same day after validation (see `PROTOCOL.md` amendments) |
 | 0.5 | Analyze | **Pass 2026-08-24** — note in `STATUS.md` |
-| 0.5b | Unit 00 inventory | Access + gene coverage; **no ICI peek**; Seal blocker |
-| 0.6 | **Seal** (human) | git SHA + OSF |
+| 0.5b | Unit 00 inventory | Access + gene coverage; **no ICI peek**; run blocker for Units 01–08 |
+| 0.6 | **Seal** (human) | **Done 2026-08-24** — git SHA in `STATUS.md` (OSF may follow) |
 
 **Exit:** Kill protocol sealed. Agent will not edit CONFIRMATORY sections.
 

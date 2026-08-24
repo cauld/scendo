@@ -68,7 +68,7 @@ Neighbors (`GPR18, GPR119, TRPV2, ABHD6, ABHD12`) are exploratory and stay out o
 
 **Lineage buckets (substring map, first match):** B/plasma; myeloid; T/NK; malignant/epithelial; stromal/other. Census is the primary scRNA source; TISCH2 is used only if Census lacks that cancer type. One source per type.
 
-**B-contamination:** a non-B lineage is dropped if `MS4A1` detection ≥ 10% in that lineage in the same dataset.
+**B-contamination (per scRNA dataset):** drop a non-B lineage if detection ≥ 10% for the first present of `MS4A1`, then `CD19`, then `CD79A`. If all three genes are absent in that dataset, discard all non-B lineages from that dataset. B/plasma is not filtered. One confirmatory state per lineage bucket (myeloid subtypes are pooled).
 
 ---
 
@@ -86,7 +86,7 @@ Report % cells with count > 0 for *CNR2*, *MGLL*, *FAAH* by lineage and cancer t
 **Pass only if both:**
 
 1. At least **two** lineage buckets have an ECS state (a lone myeloid or T/NK state is not a pass).
-2. At least one **non-B** state (after the `MS4A1` filter) has Pearson |r| < 0.6 vs B-cell **and** vs TLS in **concatenated** TCGA (available types among NSCLC, SKCM, CRC, BRCA, BLCA) **and** in **TCGA-BLCA**. Spearman is reported, not the pass metric.
+2. At least one **non-B** state (after the contamination filter) has Pearson |r| < 0.6 vs B-cell **and** vs TLS in **concatenated** TCGA (available types among NSCLC, SKCM, CRC, BRCA, BLCA) **and** in **TCGA-BLCA**. Spearman is reported, not the pass metric.
 
 **Residual escape (Gate A only), now capped:** if a Pearson test fails, `raw_score ~ B + TLS` on **that same cohort** may still qualify the state iff **both** residual SD / raw SD ≥ 0.5 **and** `|r_B| < 0.75` and `|r_TLS| < 0.75`. If either |r| ≥ 0.75, no escape (closes the |r|≈0.87 / VIF≈4 leak). **Gate B always uses the raw score.** Residual does not become the ICI predictor.
 
@@ -113,9 +113,9 @@ If Gate A fails, **do not run Gate B** as a checkpoint test. Optional honest “
 
 Named **after** Gate A numbers exist and **before** outcome files are opened.
 
-Among qualifying non-B states: lowest `max(|r_B|, |r_TLS|)` on pooled **raw** Pearson. Tie: present in more of the five cancer types. Tie: myeloid > T/NK > malignant > stromal.
+Among qualifying non-B **buckets** (not subtypes): lowest `max(|r_B|, |r_TLS|)` on pooled **raw** Pearson. Tie: present in more of the five cancer types. Tie: myeloid > T/NK > malignant > stromal. Tie: higher mean core-ECS score across types where present. Tie: larger cell *n*. Tie: ASCII bucket name.
 
-Commit: name, lineage, nine genes, four Pearson r values (B/TLS × pooled/BLCA), residual ratios if used, contamination rates.
+Commit: name, lineage, nine genes, four Pearson r values (B/TLS × pooled/BLCA), residual ratios if used, contamination gene per dataset, contamination rates, tie-breaker step.
 
 ---
 

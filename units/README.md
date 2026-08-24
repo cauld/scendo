@@ -2,11 +2,11 @@
 
 A **unit** is BMAD’s story file without Agile: everything the Operator needs in one place. One unit, one run, one note.
 
-Do not start Units 01–08 until the protocol is **locked** (see `E2E_FLOW.md` stage 3). **Unit 00** runs **before** Seal (access + gene coverage only; no ICI outcome peek).
+Do not start Units 01–08 until the protocol is **locked** (see `E2E_FLOW.md` stage 3). **Unit 00** is the first run after Seal (access + gene coverage only; no ICI outcome peek).
 
 | ID | Title | Gate | Depends on |
 |---|---|---|---|
-| 00 | Data access inventory | — | Before Seal |
+| 00 | Data access inventory | — | After Seal; before 01–08 |
 | 01 | Detection rates (Census; TISCH2 fallback) | C | 00, Seal |
 | 02 | scRNA ECS states | A | 01 |
 | 03 | Freeze markers (nine genes + lineage) | A | 02 |

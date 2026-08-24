@@ -1,6 +1,6 @@
 # PROTOCOL (kill phase)
 
-**Seal status:** DRAFT. After seal, do not edit sections marked CONFIRMATORY without a dated amendment in `STATUS.md`.
+**Seal status:** SEALED 2026-08-24. Git SHA in `STATUS.md`. After seal, do not edit sections marked CONFIRMATORY without a dated amendment in `STATUS.md`.
 
 This protocol is **only the kill test**. Atlas-scale integration, browser, and paper figures beyond Gates A–C require a new sealed protocol.
 
@@ -62,9 +62,11 @@ Cycling/proliferating cells follow the parent lineage if labeled (e.g. TISCH2 `T
 
 ## CONFIRMATORY — scoring (freeze at seal)
 
-- **scRNA states:** existing annotations only. No NMF, no new clustering. A **state** is the mean of the nine core genes inside one lineage bucket. Those nine genes **are** the marker list (Unit 03 commits lineage + the nine genes; no DE).
+- **scRNA states:** existing annotations only. No NMF, no new clustering. A **state** is the mean of the nine core genes inside one lineage bucket (macrophage and neutrophil are one myeloid state, not two). Those nine genes **are** the marker list (Unit 03 commits lineage + the nine genes; no DE).
 - **A lineage has an ECS state** if, in ≥1 cancer type, at least one core gene is detected (count > 0) in ≥5% of that lineage’s cells **and** the lineage mean core-ECS score is elevated vs other lineages in that dataset (highest or second-highest). A lineage is **present** in a cancer type when this rule holds in that type.
-- **B-contamination (replaces a DE “top markers” check):** a non-B lineage is discarded (does not count toward Gate A) if `MS4A1` detection (count > 0) in that lineage is **≥ 10%** in the same dataset. B/plasma is not subjected to this filter.
+- **B-contamination (replaces a DE “top markers” check), applied per scRNA dataset.** A non-B lineage is discarded in that dataset (does not count toward Gate A from that dataset) if detection (count > 0) of the **contamination gene** in that lineage is **≥ 10%**. B/plasma is not subjected to this filter.
+  - **Contamination gene (locked fallback):** first gene that is present in that dataset’s matrix (at least one non-NA count), in this order: `MS4A1`, then `CD19`, then `CD79A`. Record which gene was used. This fallback is **only** for the scRNA contamination screen, not a substitute in the bulk B-cell signature.
+  - **If `MS4A1`, `CD19`, and `CD79A` are all absent** from that dataset: contamination is untestable. Discard **all** non-B lineages from that dataset (they cannot contribute an ECS state). B/plasma in that dataset may still count. Other cancer types are unaffected. Gate A fails only if, after this rule, the global two-lineage / non-B-candidate tests still fail.
 - **Bulk scores:** z-score **within the cohort used for that analysis** (TCGA pooled, TCGA-BLCA, IMvigor210, and each GEO set are separate z-score windows). Use the cohort’s shipped matrix, or log2(TPM+1). Sample score = mean of gene-wise z-scores. Same rule for ECS states and for B/TLS/CD8 signatures.
 - **TCGA pooled:** concatenate samples from the available types among the five (BRCA may dominate n; that is why BLCA is also required). Report per-type Pearson r as descriptive. **Pooled Pearson** = Pearson on the concatenated matrix, not the average of per-type r.
 - **Primary estimator:** the **continuous raw** score. Median split is display-only. No tertiles, Youden, ROC, or AUC-chosen cutoffs on ICI outcomes.
@@ -85,13 +87,19 @@ Do **not** name the primary state at seal. Name it in Unit 05 after Units 02–0
 
 Procedure:
 
-1. List lineage buckets that have an ECS state and pass the `MS4A1` contamination filter.
+1. List lineage buckets that have an ECS state and pass the contamination filter (MS4A1 → CD19 → CD79A fallback above).
 2. Gate A fails if fewer than two buckets remain (including B/plasma).
 3. Non-B candidates = remaining buckets except B/plasma.
 4. In TCGA, score each non-B candidate with the **raw** nine-gene mean z-score. **Pearson** |r| vs B-cell and vs TLS must both be **< 0.6** in (a) pooled TCGA and (b) **TCGA-BLCA**. Spearman is reported, not the pass metric. If BLCA RNA is unavailable, amend before Gate B.
 5. **Residual is a Gate A qualification test only, with a hard |r| ceiling.** If Pearson |r| ≥ 0.6 vs B or vs TLS in pooled, residualize `raw_score ~ B_cell + TLS` on **pooled** samples. That cohort is rescued iff **both** (i) residual SD / raw SD **≥ 0.5** and (ii) Pearson `|r_B| < 0.75` **and** `|r_TLS| < 0.75` on that same cohort (raw score). If Pearson fails in BLCA, repeat on **BLCA only** with the same two conditions. If either |r| is **≥ 0.75**, there is **no** residual escape for that cohort. A candidate qualifies only if every failed Pearson test is rescued on that same cohort. **Gate B always uses the raw continuous score**, never the residual. Model 1 does the adjustment.
-6. If several non-B candidates qualify, primary = lowest `max(|r_B|, |r_TLS|)` using Pearson on **pooled raw** scores. Tie: present (ECS-state rule) in more of the five cancer types. Tie: myeloid > T/NK > malignant/epithelial > stromal/other.
-7. Commit in Unit 05: name, lineage bucket, the nine genes, the **four** Pearson values (`r_B_pooled`, `r_TLS_pooled`, `r_B_BLCA`, `r_TLS_BLCA`), residual SD ratios if used, and contamination rates.
+6. If several non-B candidates qualify, pick the primary with this **deterministic** cascade (no human choice). Confirmatory candidates are lineage **buckets**, not subtypes within a bucket.
+   1. Lowest `max(|r_B|, |r_TLS|)` using Pearson on **pooled raw** scores.
+   2. Tie: present (ECS-state rule) in more of the five cancer types.
+   3. Tie: myeloid > T/NK > malignant/epithelial > stromal/other.
+   4. Tie: higher mean core-ECS score (mean of that bucket’s lineage-mean core-ECS across cancer types where it has an ECS state).
+   5. Tie: larger total cell count *n* in those types for that bucket.
+   6. Tie: earlier bucket name in ASCII sort of `{malignant/epithelial, myeloid, stromal/other, t/nk}`.
+7. Commit in Unit 05: name, lineage bucket, the nine genes, the **four** Pearson values (`r_B_pooled`, `r_TLS_pooled`, `r_B_BLCA`, `r_TLS_BLCA`), residual SD ratios if used, contamination gene used per dataset, contamination rates, and which tie-breaker step decided the primary.
 8. If no non-B candidate qualifies, **Gate A fails**. Do not run Gate B as a checkpoint test.
 
 Secondary non-B states may be scored later; they cannot pass Gate B.
@@ -127,7 +135,7 @@ See `KILL.md`. Kill bar is Gate A (two lineages + confound tests, residual escap
 - Code: **Python**, one folder `pipeline/`. Unit 00 may use R only to export Bioconductor `IMvigor210CoreBiologies` to CSV/Parquet, then Python thereafter.
 - Compute: laptop. No Spark, no scGPT, no browser.
 - Gene aliases (non-exhaustive): *CNR2*/*CB2*, *MGLL*/*MAGL*, *DAGLA*/*DAGLα*, *DAGLB*/*DAGLβ*.
-- **Unit 00 (no outcome peek) is a Seal blocker:** pin exact files; confirm the nine core genes on Census/TISCH2, TCGA, IMvigor210, and both GEO matrices.
+- **Unit 00 (no outcome peek) is a run blocker for Units 01–08:** pin exact files; confirm the nine core genes on Census/TISCH2, TCGA, IMvigor210, and both GEO matrices; record scRNA presence of `MS4A1`/`CD19`/`CD79A`.
 
 ## Positive control (after Decide, not kill)
 
@@ -141,3 +149,4 @@ GSE220635 (CBD, macrophage polarization, PD-1). Do not use to redefine the seale
 | 2026-08-24 | Patch after validation: Gate B = Model 1 **response** only; unadjusted not required; residual = Gate A only; two lineages required; no DE (nine-gene mean + MS4A1 contamination); Census primary / TISCH2 fallback; within-cohort z-score; pooled = concatenated samples; Gate C numeric; Unit 00 before Seal |
 | 2026-08-24 | Analyze nits: unify fallback name to TISCH2; pin IMvigor210 extract as Bioconductor `IMvigor210CoreBiologies` |
 | 2026-08-24 | External review: residual escape also requires |r| < 0.75 vs B and vs TLS; Gate B pass also requires VIF(ECS) < 3; missing-gene score = available-case mean (denominator = genes present; min 7/9 ECS); never zero-fill |
+| 2026-08-24 | Seal patches: scRNA contamination gene fallback MS4A1 → CD19 → CD79A (if all three absent, drop non-B lineages from that dataset); Unit 05 tie-breakers add mean core-ECS, then cell *n*, then ASCII bucket name; one state per lineage bucket |

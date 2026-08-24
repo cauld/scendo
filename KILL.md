@@ -11,8 +11,8 @@
 **Pass if all hold:**
 
 - At least **two** ECS-defined states in **different** lineage buckets (B/plasma, myeloid, T/NK, malignant/epithelial, stromal/other). A single non-B lineage is not a pass.
-- At least one **non-B** candidate survives the `MS4A1` contamination filter (detection < 10% in that lineage) and the confound tests: Pearson |r| vs the B-cell signature (*MS4A1, CD19, CD79A, CD79B, MZB1*) and vs the TLS signature (*CXCL13, CCL19, CCL21, CCR7*) is **< 0.6** in concatenated pooled TCGA **and** in TCGA-BLCA. If a Pearson test fails, residual escape on **that same cohort** requires **both** residual SD / raw SD ≥ 0.5 **and** `|r_B| < 0.75` and `|r_TLS| < 0.75` (raw Pearson). If either |r| ≥ 0.75, no escape. The **raw** score still goes to Gate B. Spearman is reported, not the pass metric.
-- Marker list is the nine core ECS genes (no DE). Immunoglobulin / *MS4A1*-class identity is the contamination filter above, not a top-marker table.
+- At least one **non-B** candidate survives the **contamination filter** and the confound tests. Contamination is per scRNA dataset: detection < 10% of the contamination gene in that lineage. Contamination gene = first present of `MS4A1`, `CD19`, `CD79A`. If all three are absent in that dataset, all non-B lineages from that dataset are discarded (untestable). Pearson |r| vs the B-cell signature (*MS4A1, CD19, CD79A, CD79B, MZB1*) and vs the TLS signature (*CXCL13, CCL19, CCL21, CCR7*) is **< 0.6** in concatenated pooled TCGA **and** in TCGA-BLCA. If a Pearson test fails, residual escape on **that same cohort** requires **both** residual SD / raw SD ≥ 0.5 **and** `|r_B| < 0.75` and `|r_TLS| < 0.75` (raw Pearson). If either |r| ≥ 0.75, no escape. The **raw** score still goes to Gate B. Spearman is reported, not the pass metric.
+- Marker list is the nine core ECS genes (no DE). Immunoglobulin / B-lineage identity is the contamination filter above (`MS4A1` → `CD19` → `CD79A`), not a top-marker table.
 
 **Fail:** Fewer than two lineage states, every non-B state is B-contaminated, or no non-B candidate passes the confound tests.
 

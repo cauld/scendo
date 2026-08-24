@@ -21,8 +21,8 @@ must_not:
 **Procedure.**
 
 1. Confirm Gate A both-parts: ≥2 lineage buckets with an ECS state **and** ≥1 non-B candidate that passed confound tests (including residual cap if used).
-2. If several non-B candidates qualify: primary = lowest `max(|r_B|, |r_TLS|)` on pooled **raw** Pearson. Tie: present in more of the five cancer types. Tie: myeloid > T/NK > malignant/epithelial > stromal/other.
-3. Commit name, lineage, nine genes, four Pearson values, residual ratios if used, contamination rates.
+2. If several non-B **buckets** qualify, apply the locked cascade (no judgment): lowest `max(|r_B|, |r_TLS|)` on pooled **raw** Pearson; then more of the five cancer types; then myeloid > T/NK > malignant/epithelial > stromal/other; then higher mean core-ECS; then larger cell *n*; then ASCII bucket name. Subtypes within a bucket are not separate states.
+3. Commit name, lineage, nine genes, four Pearson values, residual ratios if used, contamination gene per dataset, contamination rates, and which cascade step broke a tie.
 4. If no non-B candidate qualifies: Gate A fails. **Do not** open ICI outcomes for a checkpoint test.
 
 **Outputs.** `research/05-primary-state.md` + git commit of that file.
