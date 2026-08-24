@@ -1,0 +1,12 @@
+.DS_Store
+.Rproj.user/
+.Rhistory
+.venv/
+__pycache__/
+*.pyc
+data/
+pipeline/output/
+*.h5ad
+*.rds
+*.rda
+.ipynb_checkpoints/
