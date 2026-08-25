@@ -1,41 +1,37 @@
 %%{init: {"theme": "base", "themeVariables": {"fontSize": "18px", "fontFamily": "Helvetica, Arial, sans-serif"}} }%%
 flowchart TB
-  subgraph lock["1. Lock — already done"]
+  subgraph lock["1. Kill lock — done"]
     direction LR
     E[Explore] --> Q[Question<br/>+ Claims]
     Q --> K[Kill]
     K --> P[Protocol]
     P --> CA[Clarify<br/>+ Analyze]
-    CA --> S[Seal<br/>git SHA + OSF]
+    CA --> S[Seal<br/>git SHA]
   end
 
-  subgraph exec["2. Execute — done"]
+  subgraph exec["2. Kill execute — done"]
     direction LR
-    U[Unit packet] --> R[Say Run]
-    R --> H[Human marks<br/>that gate]
-    H --> N[Next unit]
-    N --> U
-  end
-
-  subgraph decide["3. Decide — done"]
-    direction LR
-    CV[Converge] --> D{Decide}
-    D --> ST[Stop]
+    U[Units 00–08] --> D{Decide}
     D --> AT[Atlas-only]
-    D --> FP[Full paper<br/>closed]
   end
 
-  subgraph atlas["4. Phase 2b — NOW"]
-    NP["New atlas protocol<br/>+ new lock"]
+  subgraph atlas["3. Atlas lock — done"]
+    direction LR
+    AP[Protocol] --> CL[Clarify]
+    CL --> AA[Analyze]
+    AA --> AS[Seal]
+  end
+
+  subgraph run["4. Atlas execute — NOW"]
+    direction LR
+    R["Say Run<br/>Unit 10"]
   end
 
   S --> U
-  H -.->|Unit 08| CV
-  AT --> NP
+  AT --> AP
+  AS --> R
 
   classDef done fill:#E4EDE4,stroke:#3D5A3D,color:#1A1A1A
   classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
-  classDef later fill:#EEEEEE,stroke:#666666,color:#1A1A1A
-  class E,Q,K,P,CA,S,U,R,H,N,CV,D,AT done
-  class NP now
-  class ST,FP later
+  class E,Q,K,P,CA,S,U,D,AT,AP,CL,AA,AS done
+  class R now

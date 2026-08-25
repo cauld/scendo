@@ -5,7 +5,7 @@ This page is the **SCENDO instantiation** (units, datasets, Decide branches).
 
 Chat shorthand: **Explore → Question → Kill → Protocol → Clarify → Analyze → Seal (OSF) → Unit → Run → Converge → Decide → Archive.**
 
-**You are here:** see `STATUS.md`. Protocol **sealed**. Kill test **done**. Primary **Stromal/other**. Gate A **pass**. Gate B **fail**. **Decision: atlas-only; ICI reported negative.** **Next:** Phase 2b atlas protocol (new lock; no ICI fishing). OSF prereg may follow the git SHA by a day.
+**You are here:** see `STATUS.md`. Kill protocol **sealed**. Kill test **done**. **Decision: atlas-only.** Atlas protocol **SEALED**. **Next:** **Run** (Unit 10, Gate D). OSF prereg for the kill SHA may follow by a day.
 
 Lost on order? **[SEAL flow diagrams](docs/SEAL-FLOW.md)** — what to say, which unit is current.
 
@@ -29,9 +29,9 @@ Lost on order? **[SEAL flow diagrams](docs/SEAL-FLOW.md)** — what to say, whic
 | `PHASES.md` | Checklist |
 | `units/` | Operator packets |
 
-**Clarify:** lock the **rule** for naming the primary non-B state (Unit 05, after Gate A, **before** IMvigor210 outcomes). The name itself is not known at seal.  
-**External review:** [`PLAN.md`](PLAN.md) (this is a readable copy of the protocol; `PROTOCOL.md` wins if they disagree).  
-**Lock:** commit those files; SHA in `STATUS.md`; OSF secondary-data prereg. No ICI outcome-vs-ECS analysis until then.
+**Clarify (atlas):** **done 2026-08-24** — five defaults accepted in [`PROTOCOL-ATLAS.md`](PROTOCOL-ATLAS.md). Kill Clarify is done.  
+**External review:** [`PLAN.md`](PLAN.md) (kill, frozen) · [`PLAN-ATLAS.md`](PLAN-ATLAS.md) (atlas; `PROTOCOL-ATLAS.md` wins).  
+**Lock (atlas):** **done 2026-08-24**. SHA in `STATUS.md`. Kill SHA `3fbf310` stays.
 
 ---
 
@@ -60,4 +60,18 @@ Lost on order? **[SEAL flow diagrams](docs/SEAL-FLOW.md)** — what to say, whic
 | A fail (B-cell proxy) | Stop or descriptive only; no checkpoint claim |
 | A and B fail | Stop |
 
-No browser, large-model training, or GSE220635 on this kill protocol. Atlas-only next is a **new** protocol. GSE220635 stays a full-paper positive control unless that protocol names it.
+No browser, large-model training, or GSE220635 on this kill protocol. Atlas protocol (`PROTOCOL-ATLAS.md`) does not name them. GSE220635 stays a full-paper positive control unless an amendment names it.
+
+---
+
+## Atlas units (after atlas Seal)
+
+| Unit | Gate | Must not |
+|---|---|---|
+| 10 Reproduce core | D | Rename Stromal/other; add genes |
+| 11 Expansion inventory | E | Add types after seeing data |
+| 12 Expansion states | E | New confirmatory states |
+| 13 Stromal figures | — | UMAP / browser / clustering |
+| 14 Converge atlas | F | Refit ICI |
+
+**Run** is next (Unit 10). Atlas protocol is sealed.

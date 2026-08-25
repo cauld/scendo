@@ -2,7 +2,7 @@
 
 A **unit** is BMAD’s story file without Agile: everything the Operator needs in one place. One unit, one run, one note.
 
-Protocol is **locked**. Units 00–08 **done**. **Decision: atlas-only** (ICI negative). Next: Phase 2b atlas protocol (new lock). Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
+Kill protocol is **locked**. Units 00–08 **done**. **Decision: atlas-only**. Atlas protocol is **locked** (`PROTOCOL-ATLAS.md`). Next: **Run** Unit 10. Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
 
 | ID | Title | Gate | Depends on |
 |---|---|---|---|
@@ -15,5 +15,10 @@ Protocol is **locked**. Units 00–08 **done**. **Decision: atlas-only** (ICI ne
 | 06 | IMvigor210 confirmatory | B | 05 |
 | 07 | Melanoma replication | B (weak) | 06 |
 | 08 | Converge + Decide | — | 06–07 |
+| 10 | Reproduce core map | D | Atlas seal |
+| 11 | Expansion inventory | E | 10 |
+| 12 | Expansion ECS-state tables | E | 11 |
+| 13 | Stromal composition + figures | — | 10, 12 |
+| 14 | Converge atlas + frozen ICI | F | 12–13 |
 
-Templates: study `_template.md` or [`.seal/templates/unit.md`](../.seal/templates/unit.md). After a run, fill **Notes**. Operator does not edit `PROTOCOL.md`.
+Templates: study `_template.md` or [`.seal/templates/unit.md`](../.seal/templates/unit.md). After a run, fill **Notes**. Operator does not edit sealed `PROTOCOL.md` or, after atlas seal, `PROTOCOL-ATLAS.md` confirmatory fields.

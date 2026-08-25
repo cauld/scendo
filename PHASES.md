@@ -38,7 +38,19 @@ Write a short kill note. Do not build a browser.
 
 ## Phase 2b — Atlas-only (current)
 
-Chosen 2026-08-24. New protocol + new lock: census-scale map, named states. No ICI fishing. Do not reopen Gate B.
+Chosen 2026-08-24. Atlas lock **sealed**:
+
+| Step | Workflow | Output |
+|---|---|---|
+| Protocol | **Sealed 2026-08-24** | `PROTOCOL-ATLAS.md`, `KILL-ATLAS.md`, `PLAN-ATLAS.md` |
+| Clarify | **Done 2026-08-24** | Five defaults accepted (see `PROTOCOL-ATLAS.md` amendments) |
+| Analyze | **Pass 2026-08-24** | Note in `STATUS.md` |
+| Seal | **Done 2026-08-24** | Git SHA in `STATUS.md` (kill SHA `3fbf310` unchanged) |
+| Units 10–14 | After Seal | Reproduce core; expand Census; stromal display; converge |
+
+**Must not:** reopen Gate B; add confirmatory ECS genes; browser / scGPT / GSE220635 unless a later amendment names them.
+
+**Exit:** Atlas paper (core ± expansion) with frozen ICI-negative chapter, or stop/amend if Gate D fails (see `KILL-ATLAS.md`).
 
 ## Phase 2c — Full paper (if A and B pass)
 
