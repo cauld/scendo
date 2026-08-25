@@ -1,7 +1,7 @@
 ---
 id: 02
 role: Operator
-status: ready_after_seal
+status: done
 reads:
   - PROTOCOL.md
   - KILL.md
@@ -30,4 +30,8 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 complete.** `research/02-scrna-states.md`. Runner: `uv run python pipeline/states_02.py`. Census `2025-11-08`, 5 types. Same cell filters as Unit 01 (CNR2/MGLL/FAAH detection matches). BLCA barcodes 4129/4129. Contamination gene **MS4A1** on both matrices; **0** non-B lineages discarded (≥10%).
+- Candidates (ECS-state rule + contamination): **B/plasma** (melanoma only), **Malignant/epithelial** (BLCA, BRCA, CRC, NSCLC), **Stromal/other** (all five types). Myeloid and T/NK have ≥5% detection (usually MGLL) but are not rank 1–2 on mean core-ECS in any type.
+- Two-lineage rule **True** (3 buckets). At least one non-B candidate **True**. Gate A does **not** already fail from this unit. TCGA confound is Unit 04; do not name the primary state here.
+- No ICI files opened. No NMF / clustering / DE. No UMAP.
+

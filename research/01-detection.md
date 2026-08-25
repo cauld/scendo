@@ -55,7 +55,7 @@ Gate C stop-kill also requires no non-B ECS state (Unit 02). If the detection ha
 
 ## Human Gate C
 
-- [ ] Pass / continue (do not stop the kill on detectability)
+- [X] Pass / continue (do not stop the kill on detectability)
 - [ ] No raw-*CNR2*-UMAP atlas (CNR2 < 1% rule)
 - [ ] Fail (stop the kill) — only if detection half **and** Unit 02 finds no non-B ECS state
 
