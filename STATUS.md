@@ -2,14 +2,14 @@
 
 **Study:** SCENDO  
 **Flow:** [`.seal/E2E_FLOW.md`](.seal/E2E_FLOW.md) (generic) · [`E2E_FLOW.md`](E2E_FLOW.md) (this study)  
-**Protocol seal:** **SEALED 2026-08-24**  
-**Confirmatory git SHA:** `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`)  
-**OSF URL:** not yet (public lock may follow this SHA by a day)  
-**Current stage:** Kill test **complete**. Primary **Stromal/other**. Gate C **pass / continue**. Gate A **pass**. Gate B **fail**. **Decision: atlas-only; ICI reported negative.** Full paper closed. **Next:** new atlas protocol + new lock (Phase 2b). No ICI fishing.  
+**Protocol seal:** **SEALED 2026-08-24** (kill) · **SEALED 2026-08-24** (atlas)  
+**Confirmatory git SHA:** kill `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`) · atlas `2a74270a16685cbc4df5c45c293a7afb5b7665f5` (`2a74270`)  
+**OSF URL:** not yet (public lock may follow the kill SHA by a day)  
+**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. **Next:** **Run** Unit 10 (Gate D).  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
-**Decision:** **atlas-only** (2026-08-24). ICI chapter stays negative. Scribe ≤ `CLAIMS.md`.
+**Decision:** **atlas-only** (2026-08-24). ICI chapter stays negative. Scribe ≤ `CLAIMS.md` non-claims + atlas frozen negative.
 
-**External review brief:** [`PLAN.md`](PLAN.md)
+**External review brief:** [`PLAN.md`](PLAN.md) (kill) · [`PLAN-ATLAS.md`](PLAN-ATLAS.md) (atlas)
 
 ## Ledger
 
@@ -36,6 +36,10 @@
 | 2026-08-24 | Unit 07 GSE78220 n=26 ECS OR 0.47 (0.02–11.7); GSE91061 n=49 ECS OR 0.60 (0.07–5.51); both CIs include 1. Does not rescue Gate B |
 | 2026-08-24 | Unit 08 Converge: protocol lock and outcome wall hold. Mapped Decide: **atlas-only; ICI negative**. Human Decide next |
 | 2026-08-24 | **Decide: atlas-only.** ICI reported negative. Full paper closed. Next: Phase 2b atlas protocol (new lock; no ICI fishing) |
+| 2026-08-24 | Atlas protocol **drafted**: `PROTOCOL-ATLAS.md`, `KILL-ATLAS.md`, Units 10–14. Kill `PROTOCOL.md` not edited. **Next:** Clarify |
+| 2026-08-24 | Atlas Clarify: five defaults accepted in `PROTOCOL-ATLAS.md` (expansion list + 10k; Census-only; no UMAP/browser; neighbors exploratory; stromal table display-only) |
+| 2026-08-24 | Atlas Analyze pass: atlas artifacts consistent with kill freeze (note below) |
+| 2026-08-24 | **Atlas protocol sealed** at git SHA `2a74270a16685cbc4df5c45c293a7afb5b7665f5` (kill SHA `3fbf310` unchanged) |
 
 ## Analyze (2026-08-24)
 
@@ -66,10 +70,36 @@ Read-only check of `QUESTION.md`, `CLAIMS.md`, `KILL.md`, `PROTOCOL.md`, `PLAN.m
 
 **Not checked (by design):** data access, gene coverage on IMvigor210, code. That is Unit 00.
 
+## Analyze atlas (2026-08-24)
+
+Read-only check of `PROTOCOL-ATLAS.md`, `KILL-ATLAS.md`, `PLAN-ATLAS.md`, `CLAIMS.md`, `KILL.md`, `PROTOCOL.md`, `EXPLORE.md`, `PHASES.md`, `E2E_FLOW.md`, Units 10–14, vs kill freeze SHA `3fbf310` and Units 02 / 05 / 06–07.
+
+**Verdict: pass.** No confirmatory contradiction with the kill freeze. Atlas protocol is freeze-ready for human Seal.
+
+**Aligned:**
+
+- Nine core genes and five neighbors match kill `PROTOCOL.md` / `research/03-frozen-markers.json`.
+- Named states and primary **Stromal/other** match Unit 05. Lineage substring map stays in kill `PROTOCOL.md`.
+- IMvigor210 Model 1 numbers match Unit 06: n=298, ECS OR 1.189 (0.551–2.563), VIF(ECS)=1.360. GEO stays Units 06–07 citation. Gate B stays **fail**; no refit path.
+- Expansion list (12 types) and n ≥ 10,000 / Census-only skip rule match Clarify, Units 11–12, and Gate E.
+- Gates D / E / F and the atlas Decide table match `KILL-ATLAS.md`. No path to a Gate B pass.
+- Out list (browser, scGPT, GSE220635, neighbors in the score, UMAP) matches `EXPLORE.md` and Clarify defaults.
+- Scribe ICI sentence is the frozen negative (`PROTOCOL-ATLAS.md` / STATUS); `CLAIMS.md` item 3 remains the sealed either/or and is not reopened.
+
+**Nits (applied 2026-08-24, do not re-open atlas science):**
+
+- “Five buckets” wording → all five lineage buckets are **scored**; confirmatory **named** states remain the three frozen buckets. Myeloid / T/NK catalog rows cannot be promoted.
+- Optional TCGA bulk plots parked in `EXPLORE.md`.
+- Unit 10 must not open ICI matrices. Unit 14 Scribe bound points at the frozen negative.
+- `PLAN-ATLAS.md` source of truth = `PROTOCOL-ATLAS.md` (pass/fail = `KILL-ATLAS.md`).
+
+**Not checked (by design):** Census coverage of the 12 expansion types; code for Units 10–14. That is after Seal. Kill `PLAN.md` is historically pre-run and was not edited (`PROTOCOL.md` wins).
+
 ## Confirmatory vs exploratory
 
-Until seal: everything is exploratory planning.  
-After seal: Operator runs units; new ideas → `EXPLORE.md` or a dated protocol amendment. **Do not edit CONFIRMATORY fields** in `PROTOCOL.md` / `KILL.md` / `CLAIMS.md` except by dated amendment.
+Until kill seal: everything was exploratory planning.  
+After kill seal: Operator ran Units 00–08; new ideas → `EXPLORE.md` or a dated amendment. **Do not edit CONFIRMATORY fields** in `PROTOCOL.md` / `KILL.md` / `CLAIMS.md` except by dated amendment.  
+After **atlas** seal: same rule for `PROTOCOL-ATLAS.md` / `KILL-ATLAS.md`. Kill SHA `3fbf310` stays.
 
 ## Blockers before Seal
 
@@ -121,4 +151,21 @@ May say, inside `CLAIMS.md`:
 
 Must not say: cannabis/CBD treats cancer; CB2 **is** a clinical checkpoint; patients should change cannabis during PD-1; melanoma GEO validates a biomarker; an OS-only or unadjusted signal is a checkpoint association.
 
-**Next (Phase 2b):** new protocol + new lock for a census-scale map. Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay out until that protocol names them.
+**Next (Phase 2b):** atlas protocol **sealed**. Say **Run** (Unit 10, Gate D). Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay out unless that protocol is amended to name them.
+
+## Atlas lock (Phase 2b)
+
+Sealed: [`PROTOCOL-ATLAS.md`](PROTOCOL-ATLAS.md) · [`KILL-ATLAS.md`](KILL-ATLAS.md) · [`PLAN-ATLAS.md`](PLAN-ATLAS.md)
+
+- [x] Clarify (five defaults accepted in `PROTOCOL-ATLAS.md`)
+- [x] Analyze pass (atlas artifacts vs kill freeze)
+- [x] Human Seal — atlas git SHA `2a74270a16685cbc4df5c45c293a7afb5b7665f5`; kill SHA `3fbf310` unchanged
+
+## After atlas seal (execution)
+
+- [ ] Unit 10 reproduce core (Gate D)
+- [ ] Unit 11 expansion inventory (Gate E)
+- [ ] Unit 12 expansion states (Gate E)
+- [ ] Unit 13 stromal figures
+- [ ] Unit 14 converge + frozen ICI (Gate F)
+
