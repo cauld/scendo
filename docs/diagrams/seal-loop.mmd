@@ -22,16 +22,33 @@ flowchart TB
     AA --> AS[Seal]
   end
 
-  subgraph run["4. Atlas execute — NOW"]
+  subgraph run["4. Atlas execute — done"]
     direction LR
-    R["Say Run<br/>Unit 14"]
+    R[Units 10–14]
+  end
+
+  subgraph decide["5. Atlas Decide — done"]
+    direction LR
+    D2[Paper as written]
+  end
+
+  subgraph scribe["6. Scribe — done"]
+    direction LR
+    SC[Manuscript]
+  end
+
+  subgraph archive["7. Archive — done"]
+    direction LR
+    AR[EXPLORE.md]
   end
 
   S --> U
   AT --> AP
   AS --> R
+  R --> D2
+  D2 --> SC
+  SC --> AR
 
   classDef done fill:#E4EDE4,stroke:#3D5A3D,color:#1A1A1A
   classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
-  class E,Q,K,P,CA,S,U,D,AT,AP,CL,AA,AS done
-  class R now
+  class E,Q,K,P,CA,S,U,D,AT,AP,CL,AA,AS,R,D2,SC,AR done

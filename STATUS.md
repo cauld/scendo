@@ -5,9 +5,9 @@
 **Protocol seal:** **SEALED 2026-08-24** (kill) · **SEALED 2026-08-24** (atlas)  
 **Confirmatory git SHA:** kill `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`) · atlas `2a74270a16685cbc4df5c45c293a7afb5b7665f5` (`2a74270`)  
 **OSF URL:** not yet (public lock may follow the kill SHA by a day)  
-**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–13 **complete**. Human Gate D: **pass**. Human Gate E: **pass**. **Next:** **Run** Unit 14 (converge + frozen ICI, Gate F).  
+**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–14 **complete**. Gates D, E, F **pass**. **Atlas Decide: paper as written.** **Scribe complete.** **Archive complete** ([`EXPLORE.md`](EXPLORE.md)). Manuscript: [`docs/manuscript.md`](docs/manuscript.md). Numbers: [`RESULTS.md`](RESULTS.md). **Human remaining:** OSF click + preprint/journal click (see below).  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
-**Decision:** **atlas-only** (2026-08-24). ICI chapter stays negative. Scribe ≤ `CLAIMS.md` non-claims + atlas frozen negative.
+**Decision:** **atlas-only** (2026-08-24). **Atlas paper as written** (2026-08-25): core + expansion; ICI chapter stays negative. Scribe ≤ `CLAIMS.md` non-claims + atlas frozen negative.
 
 **External review brief:** [`PLAN.md`](PLAN.md) (kill) · [`PLAN-ATLAS.md`](PLAN-ATLAS.md) (atlas)
 
@@ -46,6 +46,12 @@
 | 2026-08-24 | Unit 12 expansion states: 6 types tabled (OV, PRAD, KIRC, STAD, HNSC, GBM); 6 skipped with Unit 11 reasons. n match Unit 11. Myeloid (OV) and T/NK (GBM, KIRC) catalog-only. Named states unchanged. Operator Gate E numbers hold. Human marks Gate E |
 | 2026-08-25 | Human Gate E: **pass**. Every locked type tabled or skipped; no substitutes; no TISCH2; named states unchanged. Myeloid / T/NK stay catalog-only. Unit 13 stromal figures next |
 | 2026-08-25 | Unit 13 stromal figures: 11-type composition tables (display-only) + 3 heatmaps. Stromal n matches Units 10/12. No UMAP / clustering / ICI. Primary **Stromal/other** unchanged. Unit 14 next |
+| 2026-08-25 | Unit 14 atlas converge: D/E drafts match human pass. Nine genes, **Stromal/other**, no UMAP/TISCH2/extras. Gate F: ICI numbers = Units 06–07; no refit. Operator Gate F holds. Human marks Gate F then Decide |
+| 2026-08-25 | Human Gate F: **pass**. ICI numbers = Units 06–07; no new model, cutoff, gene, or cohort. Human Decide next |
+| 2026-08-25 | **Decide: atlas paper as written** (core + expansion; ICI negative chapter). Full paper closed. Scribe next |
+| 2026-08-25 | **Scribe:** `RESULTS.md` + `docs/manuscript.md`. Named-state map + frozen ICI negative. Bound held. Optional Archive / OSF next |
+| 2026-08-25 | **Archive:** leftovers and closed paths in `EXPLORE.md`. Confirmatory loop done. OSF URL still not posted |
+| 2026-08-25 | Shipping packet: `CITATION.cff`, README landing, OSF after-Decide wording, `docs/manuscript.html` / `.docx` |
 
 ## Analyze (2026-08-24)
 
@@ -114,6 +120,14 @@ After **atlas** seal: same rule for `PROTOCOL-ATLAS.md` / `KILL-ATLAS.md`. Kill 
 - [x] Seal date + git SHA + “do not edit confirmatory fields” (`3fbf310870c57247163edca35ed536ade3ea4301`)
 - [ ] OSF secondary-data prereg URL (public lock; may follow git SHA by a day)
 
+## Human remaining (not agent-clickable)
+
+Do not reopen Gate B. Paste OSF URL into this file only.
+
+- [ ] **OSF.** Log in at [osf.io](https://osf.io) → Add new → Registration (not a Project). Template: Secondary Data Preregistration. Paste [`research/osf-secondary-prereg.md`](research/osf-secondary-prereg.md). Use the **after Decide** integrity wording. Add ORCID. Link git `3fbf310`. Then set **OSF URL** above and one ledger row.
+- [ ] **Preprint (optional).** bioRxiv/medRxiv: your ORCID, affiliation, competing-interests confirm, PDF/DOCX of [`docs/manuscript.md`](docs/manuscript.md). Do not add new ICI models.
+- [ ] **Journal (optional).** Same manuscript; claims ceiling still [`CLAIMS.md`](CLAIMS.md).
+
 ## After seal (execution)
 
 - [x] Unit 00 inventory complete: sources reachable; nine core genes present on IMvigor210 (0 missing); extract pinned (`IMvigor210CoreBiologies_1.0.1.tar.gz`); Census contamination gene `MS4A1`; **no** outcome-vs-ECS plots. See `research/data-inventory.md`.
@@ -157,7 +171,7 @@ May say, inside `CLAIMS.md`:
 
 Must not say: cannabis/CBD treats cancer; CB2 **is** a clinical checkpoint; patients should change cannabis during PD-1; melanoma GEO validates a biomarker; an OS-only or unadjusted signal is a checkpoint association.
 
-**Next (Phase 2b):** Unit 13 **done**. Say **Run** (Unit 14, converge + frozen ICI). Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay out unless that protocol is amended to name them. Do not promote myeloid / T/NK catalog rows. Stromal subtypes stay display-only.
+**Next (Phase 2b):** **Archive complete.** Leftovers in [`EXPLORE.md`](EXPLORE.md). Paper: [`RESULTS.md`](RESULTS.md) · [`docs/manuscript.md`](docs/manuscript.md). OSF prereg may still go up. Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay in `EXPLORE.md` unless a protocol is amended to name them. Do not promote myeloid / T/NK catalog rows. Stromal subtypes stay display-only.
 
 ## Atlas lock (Phase 2b)
 
@@ -173,7 +187,21 @@ Sealed: [`PROTOCOL-ATLAS.md`](PROTOCOL-ATLAS.md) · [`KILL-ATLAS.md`](KILL-ATLAS
 - [x] Unit 11 expansion inventory complete: `research/11-expansion-inventory.md`. Include OV, PRAD, KIRC, STAD, HNSC, GBM. Skip PAAD (missing), LIHC (n < 10,000), ESCA / UCEC / THCA / CESC (missing). No extras. No TISCH2.
 - [x] Unit 12 expansion states complete: `research/12-expansion-states.md`. Six types tabled; six skipped with Unit 11 reasons. Named states unchanged. Myeloid / T/NK catalog-only. Human Gate E: **pass**.
 - [x] Unit 13 stromal figures complete: `research/13-stromal-figures.md`. Display-only Stromal/other composition (11 types); stromal n matches Units 10/12. Heatmaps of confirmatory tables. No UMAP / clustering / ICI. Primary **Stromal/other** unchanged.
-- [ ] Unit 14 converge + frozen ICI (Gate F)
+- [x] Unit 14 converge + frozen ICI complete: `research/14-atlas-converge.md`. Human Gate F: **pass**. ICI = Units 06–07; no refit. **Decide: atlas paper as written.**
+- [x] Scribe complete: [`RESULTS.md`](RESULTS.md) · [`docs/manuscript.md`](docs/manuscript.md). Named-state map + frozen ICI negative. Bound ≤ `CLAIMS.md` + `PROTOCOL-ATLAS.md`.
+- [x] Archive complete: [`EXPLORE.md`](EXPLORE.md). Closed paths, parked methods, Census near-misses, follow-ups. OSF URL still not posted.
+
+## Atlas Converge (2026-08-25)
+
+Operator audit vs sealed `KILL-ATLAS.md` / `PROTOCOL-ATLAS.md`. Detail: [`research/14-atlas-converge.md`](research/14-atlas-converge.md).
+
+| Gate | Operator draft | Human mark |
+|---|---|---|
+| D core map | Same three buckets; primary Stromal/other; 0 flips | **Pass** (2026-08-24) |
+| E expansion | 6 tabled, 6 skipped; no substitutes; no TISCH2 | **Pass** (2026-08-25) |
+| F ICI frozen | Model 1 n=298 ECS OR 1.189 (0.551–2.563); VIF=1.360; no refit | **Pass** (2026-08-25) |
+
+Mapped Decide (`KILL-ATLAS.md`): D pass, E pass, F pass → **atlas paper as written** (core + expansion; ICI negative chapter). Full paper remains closed. Scribe ≤ `CLAIMS.md` non-claims + frozen negative. **Scribe (2026-08-25):** [`RESULTS.md`](RESULTS.md) · [`docs/manuscript.md`](docs/manuscript.md). **Archive (2026-08-25):** [`EXPLORE.md`](EXPLORE.md).
 
 ## Human Gate D
 
@@ -184,4 +212,16 @@ Sealed: [`PROTOCOL-ATLAS.md`](PROTOCOL-ATLAS.md) · [`KILL-ATLAS.md`](KILL-ATLAS
 
 - [X] Pass (every type tabled or skipped; no substitutes; named states unchanged) — marked 2026-08-25
 - [ ] Fail (silent drop / extra type / TISCH2 / promoted named state)
+
+## Human Gate F
+
+- [X] Pass (ICI numbers = Units 06–07; no new ICI analysis) — marked 2026-08-25
+- [ ] Fail (any ICI fishing)
+
+## Human Decide (atlas)
+
+- [X] Atlas paper as written (core + expansion; ICI negative chapter) — mapped path (D/E/F pass) — marked 2026-08-25
+- [ ] Stop (no atlas paper)
+- [ ] Narrower atlas — **closed** (Gate E passed; skips were locked)
+- [ ] Full paper — **closed** unless a dated kill-protocol amendment reopens Gate B
 

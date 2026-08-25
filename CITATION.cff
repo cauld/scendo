@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: Cite this repository for the SCENDO atlas paper (named-state map; frozen ICI-negative chapter).
+title: Named lineage cell states of the human tumor endocannabinoidome
+authors:
+  - family-names: Auld
+    given-names: Chad
+    email: chadauld@gmail.com
+license: CC-BY-4.0
+repository-code: https://github.com/cauld/scendo
+url: https://github.com/cauld/scendo
+keywords:
+  - endocannabinoid
+  - single-cell
+  - immune checkpoint
+  - tumor microenvironment
+  - preregistration

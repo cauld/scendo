@@ -36,7 +36,7 @@ Units in `units/` (Operator). Order is dependency order.
 
 Write a short kill note. Do not build a browser.
 
-## Phase 2b — Atlas-only (current)
+## Phase 2b — Atlas-only (complete)
 
 Chosen 2026-08-24. Atlas lock **sealed**:
 
@@ -46,11 +46,14 @@ Chosen 2026-08-24. Atlas lock **sealed**:
 | Clarify | **Done 2026-08-24** | Five defaults accepted (see `PROTOCOL-ATLAS.md` amendments) |
 | Analyze | **Pass 2026-08-24** | Note in `STATUS.md` |
 | Seal | **Done 2026-08-24** | Git SHA in `STATUS.md` (kill SHA `3fbf310` unchanged) |
-| Units 10–14 | After Seal | Units 10–13 **done**; Gates D and E **pass**; Unit 14 next |
+| Units 10–14 | After Seal | Units 10–14 **done**; Gates D, E, F **pass** |
+| Decide | **Done 2026-08-25** | Atlas paper as written (core + expansion; ICI negative chapter) |
+| Scribe | **Done 2026-08-25** | [`RESULTS.md`](RESULTS.md) · [`docs/manuscript.md`](docs/manuscript.md); bound held |
+| Archive | **Done 2026-08-25** | [`EXPLORE.md`](EXPLORE.md); confirmatory loop closed |
 
 **Must not:** reopen Gate B; add confirmatory ECS genes; browser / scGPT / GSE220635 unless a later amendment names them.
 
-**Exit:** Atlas paper (core ± expansion) with frozen ICI-negative chapter, or stop/amend if Gate D fails (see `KILL-ATLAS.md`).
+**Exit:** **Taken 2026-08-25.** Atlas paper as written. Scribe complete. Archive complete. OSF prereg may still go up.
 
 ## Phase 2c — Full paper (if A and B pass)
 

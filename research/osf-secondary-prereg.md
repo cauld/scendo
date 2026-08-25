@@ -1,13 +1,32 @@
 # OSF secondary-data preregistration (paste packet)
 
-**Status:** Draft for OSF submit. Not a substitute for the sealed protocol.  
-**Confirmatory SHA:** `3fbf310870c57247163edca35ed536ade3ea4301`  
+**Status:** Ready for human OSF submit. Not a substitute for the sealed protocol.  
+**Confirmatory SHA (the freeze):** `3fbf310870c57247163edca35ed536ade3ea4301` (2026-08-24)  
 **Repo:** https://github.com/cauld/scendo  
 **Files that win if anything conflicts:** `PROTOCOL.md`, `KILL.md`, `CLAIMS.md` at that SHA.
 
-This environment cannot log into OSF. A human submits. Paste answers below into [OSF → Registries → New → Secondary Data Preregistration](https://osf.io/registries/osf/drafts/new?form=secondary-data-preregistration) (or the van den Akker *Preregistration Template for Secondary Data Analysis*). Attach or link the SHA-pinned files.
+This environment cannot log into OSF. A human submits.
 
-**Before click:** put your name + ORCID in *Authors*. Confirm you have not opened IMvigor210/GEO **outcomes vs ECS**.
+## You are submitting AFTER Decide
+
+Confirmatory analyses **have already been run** (Units 06–07 on 2026-08-24; atlas Units 10–14 and Scribe on 2026-08-24/25). Git SHA `3fbf310` is still the protocol freeze: it was committed **before** ICI outcome-vs-ECS models (`21be9bd` named **Stromal/other**; `c1a47f9` is Units 06–07).
+
+OSF now is a **public timestamp of that already-sealed plan**, not a claim that tests remain unrun. Do **not** paste the old “analyses have not been run” integrity sentence as if it were still true on the click date.
+
+**Before click:** your name + ORCID in Authors. In *Knowledge of data*, say the plan was frozen at `3fbf310` before ICI models, and that confirmatory results now exist in the repo (`research/06-imvigor210.md`, `RESULTS.md`).
+
+**Do not create an OSF Project.** [Projects are being retired](https://help.osf.io/article/727-osf-projects-transition). **Add new → Registration** from scratch. Template: **Secondary Data Preregistration**.
+
+Permalink to the freeze: `https://github.com/cauld/scendo/tree/3fbf310870c57247163edca35ed536ade3ea4301`
+
+After OSF gives a URL, paste it into `STATUS.md` only (header **OSF URL** + one ledger row). Do not edit CONFIRMATORY protocol fields.
+
+---
+
+The sections below are the **plan as sealed** (still what to paste for research questions, variables, and models). Skip or replace any sentence that says ICI analyses have not been run.
+
+**Confirmatory SHA:** `3fbf310870c57247163edca35ed536ade3ea4301`  
+**Files that win if anything conflicts:** `PROTOCOL.md`, `KILL.md`, `CLAIMS.md` at that SHA.
 
 ---
 
@@ -19,7 +38,7 @@ This environment cannot log into OSF. A human submits. Paste answers below into 
 2. When asked “Do you have content in an existing OSF project?” choose **No**.
 3. Template: **Secondary Data Preregistration** (or **Preregistration of Secondary Data Analysis**).
 4. Attach or paste a GitHub permalink to `cauld/scendo` at commit `3fbf310` (`https://github.com/cauld/scendo/tree/3fbf310870c57247163edca35ed536ade3ea4301`). Files live on GitHub; OSF is only the timestamped plan.
-5. Paste the sections below. This is a **preregistration**, not a snapshot of already-run confirmatory tests.
+5. Paste the **plan** sections below (questions, variables, models). For Knowledge of data and Statement of integrity, use the **after Decide** wording at the top of this file, not any leftover “analyses have not been run” sentence.
 6. Disclose prior knowledge (section *Knowledge of data*).
 7. Submit. Paste the public registration URL into `STATUS.md` (STATUS only; do not edit CONFIRMATORY protocol fields).
 
@@ -39,11 +58,11 @@ The study asks where a locked nine-gene endocannabinoid-system (ECS) program sit
 
 Named confound: tumor CNR2 / ECS scores are often a B-cell/TLS proxy. Gate A (state existence and confound tests) must pass before Gate B (IMvigor210 Model 1) is run as a confirmatory checkpoint test. Overall survival, unadjusted models, deconvolution, secondary states, and melanoma GEO cohorts cannot pass or rescue Gate B. This is not a test of cannabis as cancer therapy.
 
-Protocol files (QUESTION, CLAIMS, KILL, PROTOCOL) are sealed on GitHub at commit 3fbf310870c57247163edca35ed536ade3ea4301. Confirmatory ICI outcome-versus-ECS analyses have not been run.
+Protocol files (QUESTION, CLAIMS, KILL, PROTOCOL) are sealed on GitHub at commit 3fbf310870c57247163edca35ed536ade3ea4301. That commit is the freeze. Confirmatory ICI analyses were run after it, as specified; Gate B failed. This OSF record timestamps the sealed plan.
 
 ### Authors
 
-[Your name] — [ORCID].
+Chad Auld — [add ORCID]. Correspondence: chadauld@gmail.com.
 
 ### Research questions
 
@@ -97,11 +116,13 @@ Open/public with standard licenses (Census, TCGA, GEO, Bioconductor). No exclusi
 - IMvigor210: Bioconductor `IMvigor210CoreBiologies`  
 - GEO: GSE78220, GSE91061  
 
-Exact files and gene-coverage pins: Unit 00 → `research/data-inventory.md` (not yet filled). Protocol SHA: `3fbf310`.
+Exact files and gene-coverage pins: Unit 00 → `research/data-inventory.md` (filled 2026-08-24). Protocol SHA: `3fbf310`.
 
 ### Date(s) data were accessed
 
-Protocol authors have **not** downloaded ICI matrices for confirmatory outcome-vs-ECS analysis as of 24 August 2026. Literature and codebook-level knowledge of these public resources exists (see Knowledge of data). Unit 00 will record download dates; inventory must not plot response vs ECS.
+**At seal (2026-08-24):** ICI matrices had not been used for outcome-vs-ECS models. Unit 00 recorded access and gene coverage without response-vs-ECS plots.
+
+**When submitting OSF after Decide:** Census, TCGA, IMvigor210, and GEO files were accessed for the sealed units on 2026-08-24. Primary state was named (`21be9bd`) before ICI models (`c1a47f9`). Disclose that in Knowledge of data.
 
 ### Data collection
 
@@ -165,17 +186,17 @@ None.
 
 ### Previous work
 
-No prior SCENDO paper, preprint, or conference analysis of ECS scores vs IMvigor210 response. The registrant knows the public literature that *CNR2* is often B-cell-associated, that B cells/TLS predict ICI in several cancers, and that IMvigor210/TCGA/Census/GEO exist as public resources. Affiliates/AI drafting this protocol have not been given confirmatory outcome-vs-ECS results.
+No prior SCENDO paper or conference analysis existed at seal. The registrant knows the public literature that *CNR2* is often B-cell-associated, that B cells/TLS predict ICI in several cancers, and that IMvigor210/TCGA/Census/GEO exist as public resources.
 
-**Fill in if true:** any lab paper that already used IMvigor210, TCGA, or Census for other genes — list here even if ECS was not scored.
+**After Decide (paste this on OSF):** Confirmatory results are now in this repository (`research/06-imvigor210.md`, `research/07-melanoma-geo.md`, `RESULTS.md`, `docs/manuscript.md`). Gate B **failed** (Model 1 ECS CI includes 1). The atlas paper reports that negative. This OSF record does not re-open Gate B.
+
+**Fill in if true:** any other lab paper that already used IMvigor210, TCGA, or Census for other genes.
 
 ### Prior knowledge
 
-**Have:** published biology and cohort descriptions; the sealed protocol design; **no** IMvigor210 or GEO plots or models of response/OS vs ECS, *CNR2*, or B-cell scores for this study.
+**At seal:** published biology and cohort descriptions; the sealed protocol; no ICI outcome-vs-ECS models for this study. Primary non-B state named in Unit 05 **before** those files were opened (git `21be9bd` before `c1a47f9`).
 
-**Have not (confirmatory wall):** opened ICI phenotype/outcome files to choose genes, cutoffs, or Model 1. Primary non-B state is named in Unit 05 **before** those files are opened.
-
-If Unit 00 confirms column names of response/OS without summarizing vs ECS, that is allowed and is not a test of H-B.
+**At OSF click after Decide:** those models have been run as specified. Disclose that. The freeze SHA remains `3fbf310`.
 
 ---
 
@@ -224,9 +245,9 @@ Neighbor ECS genes; NMF programs; CIBERSORTx/BayesPrism ECS-in-fraction; GSE2206
 
 ---
 
-## Statement of integrity
+## Statement of integrity (use this version after Decide)
 
-The registrant states that this preregistration was completed to the best of their knowledge, that confirmatory ICI outcome-vs-ECS analyses for SCENDO have **not** been run to choose the model or gene list, and that no other preregistration exists for the same confirmatory hypotheses on IMvigor210 ECS-vs-response as specified at git SHA `3fbf310870c57247163edca35ed536ade3ea4301`.
+The registrant states that the confirmatory protocol was sealed at git SHA `3fbf310870c57247163edca35ed536ade3ea4301` on 2026-08-24, that genes, models, and the Unit 05 primary name were frozen before ICI outcome-vs-ECS analysis, and that those analyses were then run as specified. This OSF record deposits that sealed plan for public timestamping. It does not claim that confirmatory tests remain unrun as of the OSF submission date. No other preregistration exists for the same confirmatory hypotheses at that SHA.
 
 ---
 

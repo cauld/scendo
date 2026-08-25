@@ -1,7 +1,7 @@
 ---
 id: 14
 role: Operator
-status: ready
+status: done
 reads:
   - PROTOCOL-ATLAS.md
   - KILL-ATLAS.md
@@ -31,6 +31,20 @@ must_not:
 
 **Pass criteria (human):** Gates D/E/F marked. Then human Decide whether to write the atlas manuscript (Scribe).
 
+## Human Gate F (after Converge)
+
+- [X] Pass (ICI numbers = Units 06–07; no new ICI analysis) — marked 2026-08-25
+- [ ] Fail (any ICI fishing)
+
+## Human Decide (atlas)
+
+- [X] Atlas paper as written (core + expansion; ICI negative chapter) — mapped path (D/E/F pass) — marked 2026-08-25
+- [ ] Stop (no atlas paper)
+- [ ] Narrower atlas — **closed** (Gate E passed)
+- [ ] Full paper — **closed** unless a dated kill-protocol amendment reopens Gate B
+
 ## Notes (after run)
 
--
+- **2026-08-25 Converge complete.** `research/14-atlas-converge.md`. No pipeline runner. Atlas SHA `2a74270` and kill SHA `3fbf310` unchanged after seal. ICI last written in `c1a47f9` (Units 06–07); atlas commits add Units 10–13 only.
+- Nine genes, primary **Stromal/other**, no UMAP/browser, no TISCH2 shopping, no extra types. Myeloid / T/NK stay catalog-only. Stromal subtypes stay display-only.
+- Gate drafts: **D pass** (human 2026-08-24), **E pass** (human 2026-08-25), **F pass** (human 2026-08-25). IMvigor210 n=298 ECS OR 1.189 (0.551–2.563) VIF=1.360; GEO citation only; no refit. **2026-08-25 human Decide: atlas paper as written** (core + expansion; ICI negative chapter). **Scribe complete:** `RESULTS.md` · `docs/manuscript.md`.
