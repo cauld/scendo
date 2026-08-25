@@ -1,10 +1,10 @@
 %%{init: {"theme": "base", "themeVariables": {"fontSize": "18px", "fontFamily": "Helvetica, Arial, sans-serif"}} }%%
 flowchart LR
-  A["Open STATUS.md<br/>You are here"] --> B["Gate A pass<br/>Stromal/other"]
-  B --> C["Name in git<br/>05-primary-state.md"]
+  A["Open STATUS.md<br/>You are here"] --> B["Gate A pass<br/>Gate B fail"]
+  B --> C["GEO reported<br/>cannot rescue"]
   C --> D["In chat, say<br/>Run"]
-  D --> E["Unit 06 IMvigor210<br/>Gate B"]
-  E --> F["Human marks<br/>Gate B"]
+  D --> E["Unit 08 Converge"]
+  E --> F["Human Decide<br/>atlas-only vs stop"]
 
   classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
   classDef step fill:#F7F7F7,stroke:#555555,color:#1A1A1A

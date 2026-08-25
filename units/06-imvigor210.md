@@ -1,7 +1,7 @@
 ---
 id: 06
 role: Operator
-status: ready_after_seal
+status: done
 reads:
   - PROTOCOL.md
   - KILL.md
@@ -33,4 +33,6 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 complete.** `research/06-imvigor210.md`. Runner: `uv run python pipeline/imvigor_06.py`. Primary **Stromal/other**. Freeze commit `21be9bd` before outcomes opened.
+- Model 1 n=298 (68 CR/PR, 230 SD/PD). ECS OR 1.189 (0.551–2.563), CI includes 1. VIF(ECS)=1.360 (<3). Operator Gate B numbers **do not hold**. CD8 OR 2.380 (1.508–3.757) as expected; cannot pass Gate B.
+- Unadjusted ECS OR 1.076 (0.568–2.038). Model 2 n=234 ECS OR 1.093 (0.449–2.663). Cox OS n=348 ECS HR 0.898 (0.623–1.294). No cutoff search. **2026-08-24 human Gate B: Fail.** **Next:** Unit 07 melanoma GEO (report only; cannot rescue).

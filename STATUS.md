@@ -5,7 +5,7 @@
 **Protocol seal:** **SEALED 2026-08-24**  
 **Confirmatory git SHA:** `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`)  
 **OSF URL:** not yet (public lock may follow this SHA by a day)  
-**Current stage:** Units 00–05 done. Primary named **Stromal/other**. Human marked Gate C **pass / continue**. Human marked Gate A **pass**. **Next:** Unit 06 (IMvigor210 Gate B) after the name is in git.  
+**Current stage:** Units 00–07 done. Primary **Stromal/other**. Gate A **pass**. Gate B **fail**. Melanoma GEO reported (cannot rescue). **Next:** Unit 08 Converge, then human **Decide** (atlas-only path if Decide follows A pass / B fail).  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
 **Decision:** none yet (full paper vs atlas-only vs stop)
 
@@ -31,6 +31,9 @@
 | 2026-08-24 | Unit 04 TCGA confound: pooled n=3664 r_B=0.417 r_TLS=0.383; BLCA n=426 r_B=0.361 r_TLS=0.263; both |r| < 0.6; both non-B candidates qualify; no residual; no ICI files |
 | 2026-08-24 | Unit 05 primary named **Stromal/other** (cascade step 2: 5 types vs 4). Gate A numbers hold; human marks Gate A. No ICI files |
 | 2026-08-24 | Human Gate A: **pass**. Primary **Stromal/other** frozen. Unit 06 IMvigor210 next |
+| 2026-08-24 | Unit 06 IMvigor210: Model 1 n=298 ECS OR 1.189 (0.551–2.563) CI includes 1; VIF(ECS)=1.36. Operator Gate B numbers fail. Human marks Gate B |
+| 2026-08-24 | Human Gate B: **fail**. Unit 07 melanoma GEO next (report only) |
+| 2026-08-24 | Unit 07 GSE78220 n=26 ECS OR 0.47 (0.02–11.7); GSE91061 n=49 ECS OR 0.60 (0.07–5.51); both CIs include 1. Does not rescue Gate B |
 
 ## Analyze (2026-08-24)
 
@@ -80,4 +83,6 @@ After seal: Operator runs units; new ideas → `EXPLORE.md` or a dated protocol 
 - [x] Unit 02 scRNA ECS states complete: `research/02-scrna-states.md`. Candidates: B/plasma, Malignant/epithelial, Stromal/other. Two-lineage rule holds. No ICI files.
 - [x] Unit 03 freeze markers complete: `research/03-frozen-markers.json`. Marker list = nine core genes + B/plasma, Malignant/epithelial, Stromal/other. No DE.
 - [x] Unit 04 TCGA confound complete: `research/04-tcga-confound.md`. Both non-B candidates qualify (pooled and BLCA |r| < 0.6). Residual not used.
-- [x] Unit 05 primary named: `research/05-primary-state.md`. **Stromal/other**. Cascade step 2 (present in more of the five types). Human Gate A: **pass**. Commit that file before Unit 06. **Next:** Unit 06 IMvigor210 Gate B.
+- [x] Unit 05 primary named: `research/05-primary-state.md`. **Stromal/other**. Cascade step 2 (present in more of the five types). Human Gate A: **pass**. Frozen in git before Unit 06.
+- [x] Unit 06 IMvigor210 complete: `research/06-imvigor210.md`. Model 1 n=298 ECS OR 1.189 (0.551–2.563) CI includes 1; VIF(ECS)=1.360. Human Gate B: **fail**.
+- [x] Unit 07 melanoma GEO complete: `research/07-melanoma-geo.md`. GSE78220 n=26; GSE91061 n=49. ECS CIs include 1. Cannot rescue Gate B. **Next:** Unit 08 Converge + Decide.

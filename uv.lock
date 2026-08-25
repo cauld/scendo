@@ -1245,6 +1245,7 @@ dependencies = [
     { name = "pyarrow" },
     { name = "rdata" },
     { name = "requests" },
+    { name = "statsmodels" },
 ]
 
 [package.dev-dependencies]
@@ -1259,6 +1260,7 @@ requires-dist = [
     { name = "pyarrow", specifier = ">=17" },
     { name = "rdata", specifier = ">=0.11" },
     { name = "requests", specifier = ">=2.32" },
+    { name = "statsmodels", specifier = ">=0.14.6" },
 ]
 
 [package.metadata.requires-dev]

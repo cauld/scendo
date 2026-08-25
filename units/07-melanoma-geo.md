@@ -1,7 +1,7 @@
 ---
 id: 07
 role: Operator
-status: ready_after_seal
+status: done
 reads:
   - PROTOCOL.md
   - research/05-primary-state.md
@@ -29,4 +29,7 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 complete.** `research/07-melanoma-geo.md`. Runner: `uv run python pipeline/geo_07.py`. Same nine-gene **Stromal/other** score. No cutoff search. Does not rescue Gate B.
+- GSE78220: dropped `Pt16.OnTx`; averaged Pt27A/B; n=26 (14 CR/PR, 12 PD). Model 1 ECS OR 0.469 (0.019–11.697). Unadjusted 1.108 (0.084–14.613).
+- GSE91061: pre-treatment only; dropped 2 UNK; n=49 (10 PRCR, 39 SD/PD). Model 1 ECS OR 0.603 (0.066–5.510). Unadjusted 1.091 (0.163–7.310).
+- **Next:** Unit 08 Converge + human Decide.

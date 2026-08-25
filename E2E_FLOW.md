@@ -5,8 +5,7 @@ This page is the **SCENDO instantiation** (units, datasets, Decide branches).
 
 Chat shorthand: **Explore → Question → Kill → Protocol → Clarify → Analyze → Seal (OSF) → Unit → Run → Converge → Decide → Archive.**
 
-**You are here:** see `STATUS.md`. Protocol **sealed**. Units 00–05 **done**. Primary named **Stromal/other**. Human Gate A **pass**. **Next:** Unit 06 (IMvigor210). OSF prereg may follow the git SHA by a day.  
-Do not start Unit 06 until `research/05-primary-state.md` is in git.
+**You are here:** see `STATUS.md`. Protocol **sealed**. Units 00–07 **done**. Primary **Stromal/other**. Gate A **pass**. Gate B **fail**. GEO replication reported (cannot rescue). **Next:** Unit 08 Converge, then human Decide. OSF prereg may follow the git SHA by a day.
 
 Lost on order? **[SEAL flow diagrams](docs/SEAL-FLOW.md)** — what to say, which unit is current.
 
