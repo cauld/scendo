@@ -1,15 +1,15 @@
 %%{init: {"theme": "base", "themeVariables": {"fontSize": "18px", "fontFamily": "Helvetica, Arial, sans-serif"}} }%%
 flowchart TB
-  subgraph before["No ICI outcomes until Unit 05 is committed"]
+  subgraph before["Name written — commit before ICI outcomes"]
     direction LR
     U00["00 Inventory"] --> U01["01 Detection<br/>Gate C"]
     U01 --> U02["02 scRNA states"]
     U02 --> U03["03 Freeze markers"]
-    U03 --> U04["04 TCGA confound<br/>Gate A"]
-    U04 --> U05["05 Name primary<br/>state — WALL"]
+    U03 --> U04["04 TCGA confound<br/>Gate A numbers"]
+    U04 --> U05["05 Name primary<br/>Stromal/other"]
   end
 
-  subgraph after["Outcomes allowed only after the name is in git"]
+  subgraph after["Outcomes allowed only after Gate A pass + name in git"]
     direction LR
     U06["06 IMvigor210<br/>Gate B"] --> U07["07 Melanoma GEO<br/>report only"]
     U07 --> U08["08 Converge<br/>+ Decide"]
@@ -20,6 +20,6 @@ flowchart TB
   classDef done fill:#E4EDE4,stroke:#3D5A3D,color:#1A1A1A
   classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
   classDef later fill:#EEEEEE,stroke:#666666,color:#1A1A1A
-  class U00,U01,U02 done
-  class U03 now
-  class U04,U05,U06,U07,U08 later
+  class U00,U01,U02,U03,U04,U05 done
+  class U06 now
+  class U07,U08 later

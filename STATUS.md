@@ -5,7 +5,7 @@
 **Protocol seal:** **SEALED 2026-08-24**  
 **Confirmatory git SHA:** `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`)  
 **OSF URL:** not yet (public lock may follow this SHA by a day)  
-**Current stage:** Units 00–02 done. Human marked Gate C **pass / continue**. **Next:** Unit 03 (freeze markers).  
+**Current stage:** Units 00–05 done. Primary named **Stromal/other**. Human marked Gate C **pass / continue**. Human marked Gate A **pass**. **Next:** Unit 06 (IMvigor210 Gate B) after the name is in git.  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
 **Decision:** none yet (full paper vs atlas-only vs stop)
 
@@ -27,6 +27,10 @@
 | 2026-08-24 | Unit 00 inventory: sources reachable; IMvigor 9/9 ECS; Census 4/5 types (BLCA → TISCH2); no outcome peek |
 | 2026-08-24 | Unit 01 detection table: 5 types; stop-kill detection half **false**; human marks Gate C |
 | 2026-08-24 | Human Gate C: **pass / continue**. Unit 02 scRNA states: 3 candidate buckets (B/plasma, malignant/epithelial, stromal/other); two-lineage rule holds; no contamination drops |
+| 2026-08-24 | Unit 03 freeze markers: nine core ECS genes + 3 lineage buckets in `research/03-frozen-markers.json`; no DE; no ICI files |
+| 2026-08-24 | Unit 04 TCGA confound: pooled n=3664 r_B=0.417 r_TLS=0.383; BLCA n=426 r_B=0.361 r_TLS=0.263; both |r| < 0.6; both non-B candidates qualify; no residual; no ICI files |
+| 2026-08-24 | Unit 05 primary named **Stromal/other** (cascade step 2: 5 types vs 4). Gate A numbers hold; human marks Gate A. No ICI files |
+| 2026-08-24 | Human Gate A: **pass**. Primary **Stromal/other** frozen. Unit 06 IMvigor210 next |
 
 ## Analyze (2026-08-24)
 
@@ -73,4 +77,7 @@ After seal: Operator runs units; new ideas → `EXPLORE.md` or a dated protocol 
 
 - [x] Unit 00 inventory complete: sources reachable; nine core genes present on IMvigor210 (0 missing); extract pinned (`IMvigor210CoreBiologies_1.0.1.tar.gz`); Census contamination gene `MS4A1`; **no** outcome-vs-ECS plots. See `research/data-inventory.md`.
 - [x] Unit 01 Gate C marked by human (`research/01-detection.md`): **pass / continue** (do not stop the kill on detectability). Table complete; stop-kill detection half was false.
-- [x] Unit 02 scRNA ECS states complete: `research/02-scrna-states.md`. Candidates: B/plasma, Malignant/epithelial, Stromal/other. Two-lineage rule holds. No ICI files. **Next:** Unit 03 freeze markers.
+- [x] Unit 02 scRNA ECS states complete: `research/02-scrna-states.md`. Candidates: B/plasma, Malignant/epithelial, Stromal/other. Two-lineage rule holds. No ICI files.
+- [x] Unit 03 freeze markers complete: `research/03-frozen-markers.json`. Marker list = nine core genes + B/plasma, Malignant/epithelial, Stromal/other. No DE.
+- [x] Unit 04 TCGA confound complete: `research/04-tcga-confound.md`. Both non-B candidates qualify (pooled and BLCA |r| < 0.6). Residual not used.
+- [x] Unit 05 primary named: `research/05-primary-state.md`. **Stromal/other**. Cascade step 2 (present in more of the five types). Human Gate A: **pass**. Commit that file before Unit 06. **Next:** Unit 06 IMvigor210 Gate B.

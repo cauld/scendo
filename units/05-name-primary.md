@@ -1,7 +1,7 @@
 ---
 id: 05
 role: Operator
-status: ready_after_seal
+status: done
 reads:
   - PROTOCOL.md
   - KILL.md
@@ -31,4 +31,6 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 complete.** `research/05-primary-state.md`. Runner: `uv run python pipeline/name_05.py`. Primary **Stromal/other**. Cascade step 1 tied (same pooled |r|); step 2 broke it (5 types vs 4). No ICI files. No Gate B.
+- Gate A operator numbers hold: 3 buckets (B/plasma + two non-B); both non-B qualify (pooled r_B=0.4173 r_TLS=0.3835; BLCA r_B=0.3605 r_TLS=0.2628; residual not used). Contamination gene **MS4A1** on Census and BLCA; 0 non-B discards.
+- **2026-08-24 human Gate A:** Pass. `research/05-primary-state.md`. **Next:** commit that file, then Unit 06 IMvigor210.

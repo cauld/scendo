@@ -1,7 +1,7 @@
 ---
 id: 04
 role: Operator
-status: ready_after_seal
+status: done
 reads:
   - PROTOCOL.md
   - KILL.md
@@ -30,4 +30,6 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 complete.** `research/04-tcga-confound.md`. Runner: `uv run python pipeline/confound_04.py`. TOIL `tcga_RSEM_gene_tpm`, n=3664 pooled / 426 BLCA (complete cases). No ICI files. Primary state not named.
+- Non-B candidates: Malignant/epithelial, Stromal/other. Same nine-gene bulk score (no DE). Pooled Pearson r_B=0.417, r_TLS=0.383; BLCA r_B=0.361, r_TLS=0.263. Both |r| < 0.6; residual escape not used. Both candidates qualify.
+- Two-lineage rule still holds (B/plasma + two non-B). Human marks Gate A in Unit 05. **Next:** Unit 05 name primary (still no ICI outcomes).

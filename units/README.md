@@ -2,7 +2,7 @@
 
 A **unit** is BMAD’s story file without Agile: everything the Operator needs in one place. One unit, one run, one note.
 
-Protocol is **locked**. Unit 00 is **done**. Next: Unit 01. Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
+Protocol is **locked**. Units 00–05 are **done**. Gate A **pass**. Next: Unit 06. Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
 
 | ID | Title | Gate | Depends on |
 |---|---|---|---|

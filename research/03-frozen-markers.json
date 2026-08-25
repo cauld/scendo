@@ -1,0 +1,574 @@
+{
+  "unit": "03",
+  "title": "Frozen markers",
+  "run_date": "2026-08-24",
+  "generated_at": "2026-08-25T02:56:28.348334+00:00",
+  "protocol_sha": "3fbf310870c57247163edca35ed536ade3ea4301",
+  "rule": "Confirmatory marker object is the nine core ECS genes plus lineage buckets that have an ECS state after the Unit 02 contamination filter. No DE. Do not add or drop genes except by dated protocol amendment.",
+  "marker_list": {
+    "genes": [
+      "CNR1",
+      "CNR2",
+      "GPR55",
+      "TRPV1",
+      "FAAH",
+      "MGLL",
+      "DAGLA",
+      "DAGLB",
+      "NAPEPLD"
+    ],
+    "lineages": [
+      "B/plasma",
+      "Malignant/epithelial",
+      "Stromal/other"
+    ]
+  },
+  "core_ecs_genes": [
+    "CNR1",
+    "CNR2",
+    "GPR55",
+    "TRPV1",
+    "FAAH",
+    "MGLL",
+    "DAGLA",
+    "DAGLB",
+    "NAPEPLD"
+  ],
+  "hgnc_aliases": {
+    "CNR1": {
+      "symbol": "CNR1",
+      "ensembl": "ENSG00000118432",
+      "entrez": "1268",
+      "hgnc_aliases": [
+        "CB1K5",
+        "CB-R",
+        "CB1",
+        "CANN6",
+        "CB1A",
+        "CNR"
+      ],
+      "protocol_aliases": [
+        "CB1",
+        "CB-R",
+        "CNR",
+        "CANN6"
+      ],
+      "aliases_used": [
+        "CNR1",
+        "CB1K5",
+        "CB-R",
+        "CB1",
+        "CANN6",
+        "CB1A",
+        "CNR"
+      ],
+      "matrix_symbol": "CNR1"
+    },
+    "CNR2": {
+      "symbol": "CNR2",
+      "ensembl": "ENSG00000188822",
+      "entrez": "1269",
+      "hgnc_aliases": [
+        "CB2"
+      ],
+      "protocol_aliases": [
+        "CB2",
+        "CX5",
+        "CB-2"
+      ],
+      "aliases_used": [
+        "CNR2",
+        "CB2",
+        "CX5",
+        "CB-2"
+      ],
+      "matrix_symbol": "CNR2"
+    },
+    "GPR55": {
+      "symbol": "GPR55",
+      "ensembl": "ENSG00000135898",
+      "entrez": "9290",
+      "hgnc_aliases": [],
+      "protocol_aliases": [
+        "LPIR1"
+      ],
+      "aliases_used": [
+        "GPR55",
+        "LPIR1"
+      ],
+      "matrix_symbol": "GPR55"
+    },
+    "TRPV1": {
+      "symbol": "TRPV1",
+      "ensembl": "ENSG00000196689",
+      "entrez": "7442",
+      "hgnc_aliases": [
+        "VR1"
+      ],
+      "protocol_aliases": [
+        "VR1"
+      ],
+      "aliases_used": [
+        "TRPV1",
+        "VR1"
+      ],
+      "matrix_symbol": "TRPV1"
+    },
+    "FAAH": {
+      "symbol": "FAAH",
+      "ensembl": "ENSG00000117480",
+      "entrez": "2166",
+      "hgnc_aliases": [
+        "FAAH-1",
+        "FAAH1"
+      ],
+      "protocol_aliases": [
+        "FAAH1"
+      ],
+      "aliases_used": [
+        "FAAH",
+        "FAAH-1",
+        "FAAH1"
+      ],
+      "matrix_symbol": "FAAH"
+    },
+    "MGLL": {
+      "symbol": "MGLL",
+      "ensembl": "ENSG00000074416",
+      "entrez": "11343",
+      "hgnc_aliases": [
+        "HU-K5",
+        "MGL",
+        "MAGL"
+      ],
+      "protocol_aliases": [
+        "MAGL",
+        "MGL",
+        "HUK5",
+        "HU-K5"
+      ],
+      "aliases_used": [
+        "MGLL",
+        "HU-K5",
+        "MGL",
+        "MAGL",
+        "HUK5"
+      ],
+      "matrix_symbol": "MGLL"
+    },
+    "DAGLA": {
+      "symbol": "DAGLA",
+      "ensembl": "ENSG00000134780",
+      "entrez": "747",
+      "hgnc_aliases": [
+        "KIAA0659",
+        "NSDDR",
+        "DAGLALPHA",
+        "C11orf11"
+      ],
+      "protocol_aliases": [
+        "DAGLALPHA",
+        "DAGL-ALPHA",
+        "DGL-ALPHA",
+        "C11ORF11",
+        "NOC2",
+        "NSDDR"
+      ],
+      "aliases_used": [
+        "DAGLA",
+        "KIAA0659",
+        "NSDDR",
+        "DAGLALPHA",
+        "C11orf11",
+        "DAGL-ALPHA",
+        "DGL-ALPHA",
+        "NOC2"
+      ],
+      "matrix_symbol": "DAGLA"
+    },
+    "DAGLB": {
+      "symbol": "DAGLB",
+      "ensembl": "ENSG00000164535",
+      "entrez": "221955",
+      "hgnc_aliases": [
+        "KCCR13L",
+        "DAGLBETA"
+      ],
+      "protocol_aliases": [
+        "DAGLBETA",
+        "DAGL-BETA",
+        "DGL-BETA",
+        "KCCR13L"
+      ],
+      "aliases_used": [
+        "DAGLB",
+        "KCCR13L",
+        "DAGLBETA",
+        "DAGL-BETA",
+        "DGL-BETA"
+      ],
+      "matrix_symbol": "DAGLB"
+    },
+    "NAPEPLD": {
+      "symbol": "NAPEPLD",
+      "ensembl": "ENSG00000161048",
+      "entrez": "222236",
+      "hgnc_aliases": [
+        "FMP30",
+        "C7orf18",
+        "NAPE-PLD"
+      ],
+      "protocol_aliases": [
+        "NAPE-PLD",
+        "NAPEPLD",
+        "FMP30",
+        "C7ORF9"
+      ],
+      "aliases_used": [
+        "NAPEPLD",
+        "FMP30",
+        "C7orf18",
+        "NAPE-PLD",
+        "C7ORF9"
+      ],
+      "matrix_symbol": "NAPEPLD"
+    }
+  },
+  "lineage_buckets_with_ecs_state": [
+    {
+      "bucket": "B/plasma",
+      "cancer_types": [
+        "melanoma"
+      ]
+    },
+    {
+      "bucket": "Malignant/epithelial",
+      "cancer_types": [
+        "BLCA",
+        "BRCA",
+        "CRC",
+        "NSCLC"
+      ]
+    },
+    {
+      "bucket": "Stromal/other",
+      "cancer_types": [
+        "BLCA",
+        "BRCA",
+        "CRC",
+        "NSCLC",
+        "melanoma"
+      ]
+    }
+  ],
+  "cancer_types": [
+    {
+      "cancer_type": "CRC",
+      "scrna_source": "Census",
+      "census_version": "2025-11-08"
+    },
+    {
+      "cancer_type": "BRCA",
+      "scrna_source": "Census",
+      "census_version": "2025-11-08"
+    },
+    {
+      "cancer_type": "NSCLC",
+      "scrna_source": "Census",
+      "census_version": "2025-11-08"
+    },
+    {
+      "cancer_type": "melanoma",
+      "scrna_source": "Census",
+      "census_version": "2025-11-08"
+    },
+    {
+      "cancer_type": "BLCA",
+      "scrna_source": "TISCH2+GEO GSE130001",
+      "census_version": null
+    }
+  ],
+  "contamination": {
+    "fallback_order": [
+      "MS4A1",
+      "CD19",
+      "CD79A"
+    ],
+    "threshold_pct": 10.0,
+    "non_b_lineages_discarded": 0,
+    "gene_used_census": "MS4A1",
+    "gene_used_blca": "MS4A1",
+    "rates": [
+      {
+        "cancer_type": "CRC",
+        "source": "Census",
+        "bucket": "B/plasma",
+        "n_cells": 40943,
+        "contam_gene": "MS4A1",
+        "contam_pct": null,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "CRC",
+        "source": "Census",
+        "bucket": "Myeloid",
+        "n_cells": 50617,
+        "contam_gene": "MS4A1",
+        "contam_pct": 1.15,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "CRC",
+        "source": "Census",
+        "bucket": "T/NK",
+        "n_cells": 121657,
+        "contam_gene": "MS4A1",
+        "contam_pct": 1.36,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "CRC",
+        "source": "Census",
+        "bucket": "Malignant/epithelial",
+        "n_cells": 5105,
+        "contam_gene": "MS4A1",
+        "contam_pct": 3.55,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "CRC",
+        "source": "Census",
+        "bucket": "Stromal/other",
+        "n_cells": 147152,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.67,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "BRCA",
+        "source": "Census",
+        "bucket": "B/plasma",
+        "n_cells": 74842,
+        "contam_gene": "MS4A1",
+        "contam_pct": null,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "BRCA",
+        "source": "Census",
+        "bucket": "Myeloid",
+        "n_cells": 163404,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.63,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "BRCA",
+        "source": "Census",
+        "bucket": "T/NK",
+        "n_cells": 1038935,
+        "contam_gene": "MS4A1",
+        "contam_pct": 1.21,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "BRCA",
+        "source": "Census",
+        "bucket": "Malignant/epithelial",
+        "n_cells": 105099,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.32,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "BRCA",
+        "source": "Census",
+        "bucket": "Stromal/other",
+        "n_cells": 252577,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.68,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "NSCLC",
+        "source": "Census",
+        "bucket": "B/plasma",
+        "n_cells": 123381,
+        "contam_gene": "MS4A1",
+        "contam_pct": null,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "NSCLC",
+        "source": "Census",
+        "bucket": "Myeloid",
+        "n_cells": 311128,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.89,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "NSCLC",
+        "source": "Census",
+        "bucket": "T/NK",
+        "n_cells": 556875,
+        "contam_gene": "MS4A1",
+        "contam_pct": 1.96,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "NSCLC",
+        "source": "Census",
+        "bucket": "Malignant/epithelial",
+        "n_cells": 59167,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.57,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "NSCLC",
+        "source": "Census",
+        "bucket": "Stromal/other",
+        "n_cells": 110846,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.8,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "melanoma",
+        "source": "Census",
+        "bucket": "B/plasma",
+        "n_cells": 964,
+        "contam_gene": "MS4A1",
+        "contam_pct": null,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "melanoma",
+        "source": "Census",
+        "bucket": "Myeloid",
+        "n_cells": 121,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.83,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "melanoma",
+        "source": "Census",
+        "bucket": "T/NK",
+        "n_cells": 22335,
+        "contam_gene": "MS4A1",
+        "contam_pct": 1.36,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "melanoma",
+        "source": "Census",
+        "bucket": "Malignant/epithelial",
+        "n_cells": 204,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.98,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "melanoma",
+        "source": "Census",
+        "bucket": "Stromal/other",
+        "n_cells": 295,
+        "contam_gene": "MS4A1",
+        "contam_pct": 2.37,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "BLCA",
+        "source": "TISCH2+GEO GSE130001",
+        "bucket": "B/plasma",
+        "n_cells": 0,
+        "contam_gene": "MS4A1",
+        "contam_pct": null,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "BLCA",
+        "source": "TISCH2+GEO GSE130001",
+        "bucket": "Myeloid",
+        "n_cells": 0,
+        "contam_gene": "MS4A1",
+        "contam_pct": null,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "BLCA",
+        "source": "TISCH2+GEO GSE130001",
+        "bucket": "T/NK",
+        "n_cells": 0,
+        "contam_gene": "MS4A1",
+        "contam_pct": null,
+        "discarded": false,
+        "kept": false
+      },
+      {
+        "cancer_type": "BLCA",
+        "source": "TISCH2+GEO GSE130001",
+        "bucket": "Malignant/epithelial",
+        "n_cells": 3772,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.03,
+        "discarded": false,
+        "kept": true
+      },
+      {
+        "cancer_type": "BLCA",
+        "source": "TISCH2+GEO GSE130001",
+        "bucket": "Stromal/other",
+        "n_cells": 357,
+        "contam_gene": "MS4A1",
+        "contam_pct": 0.0,
+        "discarded": false,
+        "kept": true
+      }
+    ]
+  },
+  "gate_a_from_unit02": {
+    "n_buckets_with_ecs_state": 3,
+    "n_non_b": 2,
+    "two_lineage_rule": true,
+    "has_non_b_candidate": true,
+    "note": "Unit 03 freezes markers only. Gate A still requires TCGA confound tests (Unit 04) and naming (Unit 05)."
+  },
+  "not_included": {
+    "de_genes": [],
+    "neighbors_not_in_kill": [
+      "GPR18",
+      "GPR119",
+      "TRPV2",
+      "ABHD6",
+      "ABHD12"
+    ],
+    "b_tls_cd8_signatures": "locked in PROTOCOL.md; not part of this marker object",
+    "primary_state_named": false,
+    "ici_files_opened": false
+  }
+}

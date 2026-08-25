@@ -1,12 +1,12 @@
 %%{init: {"theme": "base", "themeVariables": {"fontSize": "18px", "fontFamily": "Helvetica, Arial, sans-serif"}} }%%
 flowchart LR
-  A["Open STATUS.md<br/>You are here"] --> B["Current unit: 03<br/>Freeze markers"]
-  B --> C["In chat, say<br/>Run"]
-  C --> D["Agent writes frozen<br/>nine-gene + lineage object"]
-  D --> E["Read research/<br/>03-frozen-markers.json"]
-  E --> F["No ICI outcomes<br/>then say Run for 04"]
+  A["Open STATUS.md<br/>You are here"] --> B["Gate A pass<br/>Stromal/other"]
+  B --> C["Name in git<br/>05-primary-state.md"]
+  C --> D["In chat, say<br/>Run"]
+  D --> E["Unit 06 IMvigor210<br/>Gate B"]
+  E --> F["Human marks<br/>Gate B"]
 
   classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
   classDef step fill:#F7F7F7,stroke:#555555,color:#1A1A1A
-  class A,B,C now
-  class D,E,F step
+  class A,B,C,D now
+  class E,F step
