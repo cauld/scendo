@@ -1,7 +1,7 @@
 ---
 id: 01
 role: Operator
-status: ready_after_seal
+status: done_pending_human_gate
 reads:
   - PROTOCOL.md
   - KILL.md
@@ -30,4 +30,7 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 table complete.** `research/01-detection.md`. Runner: `uv run python pipeline/detection_01.py`. Census `2025-11-08`, 5 types. BLCA barcodes 4129/4129 matched to GEO MTX.
+- Operator Gate C **draft** (human must mark): no-UMAP-atlas rule **false** (melanoma non-B CNR2 is not < 1% in every lineage). MGLL and FAAH are not both < 5% in every non-B lineage. Stop-kill detection half **false** → Gate C cannot stop the kill on detectability alone.
+- BLCA `GSE130001` has no B/myeloid/T cells under the locked map (epithelial + stromal only). Melanoma Census n is small (~24k primary-data cells after dropping uveal).
+- No ICI files opened. No UMAP.

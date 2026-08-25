@@ -1,0 +1,25 @@
+%%{init: {"theme": "base", "themeVariables": {"fontSize": "18px", "fontFamily": "Helvetica, Arial, sans-serif"}} }%%
+flowchart TB
+  subgraph before["No ICI outcomes until Unit 05 is committed"]
+    direction LR
+    U00["00 Inventory"] --> U01["01 Detection<br/>Gate C"]
+    U01 --> U02["02 scRNA states"]
+    U02 --> U03["03 Freeze markers"]
+    U03 --> U04["04 TCGA confound<br/>Gate A"]
+    U04 --> U05["05 Name primary<br/>state — WALL"]
+  end
+
+  subgraph after["Outcomes allowed only after the name is in git"]
+    direction LR
+    U06["06 IMvigor210<br/>Gate B"] --> U07["07 Melanoma GEO<br/>report only"]
+    U07 --> U08["08 Converge<br/>+ Decide"]
+  end
+
+  U05 --> U06
+
+  classDef done fill:#E4EDE4,stroke:#3D5A3D,color:#1A1A1A
+  classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
+  classDef later fill:#EEEEEE,stroke:#666666,color:#1A1A1A
+  class U00 done
+  class U01 now
+  class U02,U03,U04,U05,U06,U07,U08 later

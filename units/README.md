@@ -2,7 +2,7 @@
 
 A **unit** is BMAD’s story file without Agile: everything the Operator needs in one place. One unit, one run, one note.
 
-Do not start Units 01–08 until the protocol is **locked** (see `E2E_FLOW.md` stage 3). **Unit 00** is the first run after Seal (access + gene coverage only; no ICI outcome peek).
+Protocol is **locked**. Unit 00 is **done**. Next: Unit 01. Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
 
 | ID | Title | Gate | Depends on |
 |---|---|---|---|

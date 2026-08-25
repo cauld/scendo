@@ -5,7 +5,8 @@
 **Protocol seal:** **SEALED 2026-08-24**  
 **Confirmatory git SHA:** `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`)  
 **OSF URL:** not yet (public lock may follow this SHA by a day)  
-**Current stage:** Sealed. **Next:** Unit 00 inventory (no ICI peek) → Units 01–08.  
+**Current stage:** Unit 01 table complete. **Human marks Gate C** (`research/01-detection.md`). **Next after that:** Unit 02 (scRNA ECS states).  
+**Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
 **Decision:** none yet (full paper vs atlas-only vs stop)
 
 **External review brief:** [`PLAN.md`](PLAN.md)
@@ -23,6 +24,8 @@
 | 2026-08-24 | Analyze nits applied; Units 01–08 packets written |
 | 2026-08-24 | Human confirmed CLAIMS / KILL / PROTOCOL; seal patches (MS4A1 fallback; Unit 05 tie cascade) |
 | 2026-08-24 | **Protocol sealed** at git SHA `3fbf310870c57247163edca35ed536ade3ea4301` |
+| 2026-08-24 | Unit 00 inventory: sources reachable; IMvigor 9/9 ECS; Census 4/5 types (BLCA → TISCH2); no outcome peek |
+| 2026-08-24 | Unit 01 detection table: 5 types; stop-kill detection half **false**; human marks Gate C |
 
 ## Analyze (2026-08-24)
 
@@ -67,4 +70,5 @@ After seal: Operator runs units; new ideas → `EXPLORE.md` or a dated protocol 
 
 ## After seal (execution)
 
-- [ ] Unit 00 inventory complete: sources reachable; nine core genes present on IMvigor210 (≤2 missing); exact extract pinned; scRNA contamination genes recorded; **no** outcome-vs-ECS plots
+- [x] Unit 00 inventory complete: sources reachable; nine core genes present on IMvigor210 (0 missing); extract pinned (`IMvigor210CoreBiologies_1.0.1.tar.gz`); Census contamination gene `MS4A1`; **no** outcome-vs-ECS plots. See `research/data-inventory.md`.
+- [ ] Unit 01 Gate C marked by human (`research/01-detection.md`). Table complete; Operator draft: stop-kill detection half is false (CNR2 not dark in every non-B lineage).

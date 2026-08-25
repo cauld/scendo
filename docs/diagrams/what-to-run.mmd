@@ -1,0 +1,12 @@
+%%{init: {"theme": "base", "themeVariables": {"fontSize": "18px", "fontFamily": "Helvetica, Arial, sans-serif"}} }%%
+flowchart LR
+  A["Open STATUS.md<br/>You are here"] --> B["Current unit: 01<br/>Gate C detection"]
+  B --> C["In chat, say<br/>Run"]
+  C --> D["Agent runs Unit 01 only<br/>laptop, no ICI outcomes"]
+  D --> E["Read research/<br/>01-detection.md"]
+  E --> F["You mark Gate C<br/>then say Run again"]
+
+  classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
+  classDef step fill:#F7F7F7,stroke:#555555,color:#1A1A1A
+  class A,B,C now
+  class D,E,F step

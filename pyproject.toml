@@ -1,0 +1,22 @@
+[project]
+name = "scendo"
+version = "0.1.0"
+description = "SCENDO kill-test pipeline"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "openpyxl>=3.1",
+    "pandas>=2.2",
+    "pyarrow>=17",
+    "rdata>=0.11",
+    "requests>=2.32",
+]
+
+[dependency-groups]
+census = [
+    "cellxgene-census>=1.16",
+]
+
+[tool.uv]
+package = false
+default-groups = ["census"]
