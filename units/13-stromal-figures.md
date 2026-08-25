@@ -1,7 +1,7 @@
 ---
 id: 13
 role: Operator
-status: ready
+status: done
 reads:
   - PROTOCOL-ATLAS.md
   - research/02-scrna-states.md
@@ -32,4 +32,6 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-25 complete.** `research/13-stromal-figures.md` + `docs/diagrams/13-mean-ecs.png`, `13-detection-stromal.png`, `13-stromal-composition.png`. Runner: `uv run python pipeline/figures_13.py`. Stromal n matches Units 10/12 on all 11 types (0 mismatches). No UMAP. No clustering / DE. No ICI files.
+- Composition is display-only. Primary remains **Stromal/other**. Fibroblast-rich: OV 86%, BLCA 60%, BRCA 46%. Unmatched-heavy (existing labels, not a new state): STAD 96% (`unknown`), GBM 95% (microglia / oligodendrocyte / neoplastic), CRC 87% (stem cell), KIRC 80% (`abnormal cell` / `unknown`).
+- Heatmaps: type × bucket mean core-ECS (Units 10+12); nine-gene detection in Stromal/other; subtype % of stromal. **Next:** Unit 14 converge + frozen ICI (Gate F).

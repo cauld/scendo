@@ -1,6 +1,6 @@
 # SEAL flow — what order, what to run
 
-Look here when the sequence is unclear. **You are here** is always `STATUS.md`. Today: atlas protocol **SEALED**. Kill done (A pass, B fail, Decide atlas-only). Gate D **pass**. Unit 11 **done**. **Say `Run`.** That is Unit 12 (Gate E tables).
+Look here when the sequence is unclear. **You are here** is always `STATUS.md`. Today: atlas protocol **SEALED**. Kill done (A pass, B fail, Decide atlas-only). Gates D and E **pass**. Units 10–13 **done**. **Say `Run`.** That is Unit 14 (converge + frozen ICI).
 
 Generic kernel: [`.seal/E2E_FLOW.md`](../.seal/E2E_FLOW.md). This study: [`E2E_FLOW.md`](../E2E_FLOW.md). Chat cheat-sheet: [`.seal/workflows.md`](../.seal/workflows.md).
 
@@ -8,17 +8,17 @@ Generic kernel: [`.seal/E2E_FLOW.md`](../.seal/E2E_FLOW.md). This study: [`E2E_F
 
 Green = finished. Yellow = current. Grey = later.
 
-![SEAL loop: Unit 11 done; Run Unit 12](diagrams/seal-loop.png)
+![SEAL loop: Unit 13 done; Run Unit 14](diagrams/seal-loop.png)
 
 ## This study’s units
 
-Kill units 00–08 done. Atlas Units 10–11 done (Gate D pass). Unit 12 is next.
+Kill units 00–08 done. Atlas Units 10–13 done (Gates D and E pass). Unit 14 is next.
 
-![SCENDO Unit 11 done; Unit 12 next](diagrams/scendo-units.png)
+![SCENDO Unit 13 done; Unit 14 next](diagrams/scendo-units.png)
 
 | Say in chat | When | What happens |
 |---|---|---|
-| **Run** | After Unit 11 | **Say this now.** Unit 12 only |
+| **Run** | After Unit 13 | **Say this now.** Unit 14 only |
 | **Unit** | Packet missing or wrong | Writes/updates `units/<id>.md` only |
 | **Clarify** | After Protocol draft | **Done** |
 | **Analyze** | After Clarify | **Done** |
@@ -32,4 +32,4 @@ OSF prereg can go up any time after the kill git SHA. Browser / scGPT / GSE22063
 
 ![What to run: say Run](diagrams/what-to-run.png)
 
-Stay on this laptop. **Say `Run`.** Unit 12 only. Do not reopen ICI outcomes.
+Stay on this laptop. **Say `Run`.** Unit 14 only. Do not reopen ICI outcomes. Do not promote myeloid / T/NK catalog rows. Stromal subtypes stay display-only.

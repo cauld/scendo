@@ -5,7 +5,7 @@
 **Protocol seal:** **SEALED 2026-08-24** (kill) · **SEALED 2026-08-24** (atlas)  
 **Confirmatory git SHA:** kill `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`) · atlas `2a74270a16685cbc4df5c45c293a7afb5b7665f5` (`2a74270`)  
 **OSF URL:** not yet (public lock may follow the kill SHA by a day)  
-**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–11 **complete**. Human Gate D: **pass**. **Next:** **Run** Unit 12 (Gate E tables).  
+**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–13 **complete**. Human Gate D: **pass**. Human Gate E: **pass**. **Next:** **Run** Unit 14 (converge + frozen ICI, Gate F).  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
 **Decision:** **atlas-only** (2026-08-24). ICI chapter stays negative. Scribe ≤ `CLAIMS.md` non-claims + atlas frozen negative.
 
@@ -43,6 +43,9 @@
 | 2026-08-24 | Unit 10 reproduce core: same three buckets (B/plasma, Malignant/epithelial, Stromal/other); primary **Stromal/other**; 0 kept↔dropped flips; 0 numeric drift vs Unit 02. No ICI files. Human marks Gate D |
 | 2026-08-24 | Human Gate D: **pass**. Same three buckets; primary **Stromal/other**. Unit 11 expansion inventory next |
 | 2026-08-24 | Unit 11 expansion inventory: include OV, PRAD, KIRC, STAD, HNSC, GBM (Census n ≥ 10k). Skip PAAD, LIHC, ESCA, UCEC, THCA, CESC (missing or n < 10k). No extras. No TISCH2. Unit 12 next |
+| 2026-08-24 | Unit 12 expansion states: 6 types tabled (OV, PRAD, KIRC, STAD, HNSC, GBM); 6 skipped with Unit 11 reasons. n match Unit 11. Myeloid (OV) and T/NK (GBM, KIRC) catalog-only. Named states unchanged. Operator Gate E numbers hold. Human marks Gate E |
+| 2026-08-25 | Human Gate E: **pass**. Every locked type tabled or skipped; no substitutes; no TISCH2; named states unchanged. Myeloid / T/NK stay catalog-only. Unit 13 stromal figures next |
+| 2026-08-25 | Unit 13 stromal figures: 11-type composition tables (display-only) + 3 heatmaps. Stromal n matches Units 10/12. No UMAP / clustering / ICI. Primary **Stromal/other** unchanged. Unit 14 next |
 
 ## Analyze (2026-08-24)
 
@@ -154,7 +157,7 @@ May say, inside `CLAIMS.md`:
 
 Must not say: cannabis/CBD treats cancer; CB2 **is** a clinical checkpoint; patients should change cannabis during PD-1; melanoma GEO validates a biomarker; an OS-only or unadjusted signal is a checkpoint association.
 
-**Next (Phase 2b):** Unit 11 **done**. Say **Run** (Unit 12, Gate E tables). Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay out unless that protocol is amended to name them.
+**Next (Phase 2b):** Unit 13 **done**. Say **Run** (Unit 14, converge + frozen ICI). Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay out unless that protocol is amended to name them. Do not promote myeloid / T/NK catalog rows. Stromal subtypes stay display-only.
 
 ## Atlas lock (Phase 2b)
 
@@ -168,12 +171,17 @@ Sealed: [`PROTOCOL-ATLAS.md`](PROTOCOL-ATLAS.md) · [`KILL-ATLAS.md`](KILL-ATLAS
 
 - [x] Unit 10 reproduce core complete: `research/10-reproduce-core.md`. Same three buckets; primary **Stromal/other**; no kept↔dropped flip; no numeric drift. Human Gate D: **pass**.
 - [x] Unit 11 expansion inventory complete: `research/11-expansion-inventory.md`. Include OV, PRAD, KIRC, STAD, HNSC, GBM. Skip PAAD (missing), LIHC (n < 10,000), ESCA / UCEC / THCA / CESC (missing). No extras. No TISCH2.
-- [ ] Unit 12 expansion states (Gate E)
-- [ ] Unit 13 stromal figures
+- [x] Unit 12 expansion states complete: `research/12-expansion-states.md`. Six types tabled; six skipped with Unit 11 reasons. Named states unchanged. Myeloid / T/NK catalog-only. Human Gate E: **pass**.
+- [x] Unit 13 stromal figures complete: `research/13-stromal-figures.md`. Display-only Stromal/other composition (11 types); stromal n matches Units 10/12. Heatmaps of confirmatory tables. No UMAP / clustering / ICI. Primary **Stromal/other** unchanged.
 - [ ] Unit 14 converge + frozen ICI (Gate F)
 
 ## Human Gate D
 
 - [X] Pass (same three buckets; primary Stromal/other) — marked 2026-08-24
 - [ ] Fail (kept↔dropped flip / new confirmatory bucket / genes added / primary renamed)
+
+## Human Gate E
+
+- [X] Pass (every type tabled or skipped; no substitutes; named states unchanged) — marked 2026-08-25
+- [ ] Fail (silent drop / extra type / TISCH2 / promoted named state)
 

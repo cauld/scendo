@@ -5,7 +5,7 @@ This page is the **SCENDO instantiation** (units, datasets, Decide branches).
 
 Chat shorthand: **Explore → Question → Kill → Protocol → Clarify → Analyze → Seal (OSF) → Unit → Run → Converge → Decide → Archive.**
 
-**You are here:** see `STATUS.md`. Kill protocol **sealed**. Kill test **done**. **Decision: atlas-only.** Atlas protocol **SEALED**. Units 10–11 **done**. Gate D **pass**. **Next:** **Run** (Unit 12, Gate E tables). OSF prereg for the kill SHA may follow by a day.
+**You are here:** see `STATUS.md`. Kill protocol **sealed**. Kill test **done**. **Decision: atlas-only.** Atlas protocol **SEALED**. Units 10–13 **done**. Gates D and E **pass**. **Next:** **Run** (Unit 14, converge + frozen ICI). OSF prereg for the kill SHA may follow by a day.
 
 Lost on order? **[SEAL flow diagrams](docs/SEAL-FLOW.md)** — what to say, which unit is current.
 
@@ -74,4 +74,4 @@ No browser, large-model training, or GSE220635 on this kill protocol. Atlas prot
 | 13 Stromal figures | — | UMAP / browser / clustering |
 | 14 Converge atlas | F | Refit ICI |
 
-Gate D **pass**. Unit 11 **done**. **Run** is next (Unit 12). Atlas protocol is sealed.
+Gates D and E **pass**. Units 10–13 **done**. **Run** is next (Unit 14). Atlas protocol is sealed.

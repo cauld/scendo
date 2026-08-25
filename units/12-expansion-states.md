@@ -1,7 +1,7 @@
 ---
 id: 12
 role: Operator
-status: ready
+status: done
 reads:
   - PROTOCOL-ATLAS.md
   - KILL-ATLAS.md
@@ -31,4 +31,6 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 complete.** `research/12-expansion-states.md`. Runner: `uv run python pipeline/states_12.py`. Census `2025-11-08`, Unit 11 include list. n matches Unit 11 on all six included types. No TISCH2. No extra types. No ICI files. No NMF / clustering / DE.
+- Tabled: OV, PRAD, KIRC, STAD, HNSC, GBM (five buckets each). Skip: PAAD / ESCA / UCEC / THCA / CESC missing in Census; LIHC n < 10,000. Contamination gene **MS4A1**; **0** non-B discards.
+- Catalog calls: Malignant/epithelial (HNSC, OV, PRAD, STAD); Stromal/other (GBM, HNSC, KIRC, PRAD, STAD); Myeloid (OV) and T/NK (GBM, KIRC) are **catalog rows only**, not named states. Named states stay B/plasma, Malignant/epithelial, Stromal/other. Primary remains **Stromal/other**. Operator Gate E numbers **hold**. **2026-08-25 human Gate E: Pass.** **Next:** Unit 13 stromal figures.
