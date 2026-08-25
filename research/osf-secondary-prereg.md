@@ -62,7 +62,7 @@ Protocol files (QUESTION, CLAIMS, KILL, PROTOCOL) are sealed on GitHub at commit
 
 ### Authors
 
-Chad Auld — [add ORCID]. Correspondence: chadauld@gmail.com.
+Chad Auld — [https://orcid.org/0009-0000-8449-5810]. Correspondence: chadauld@gmail.com.
 
 ### Research questions
 

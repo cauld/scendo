@@ -4,8 +4,8 @@
 **Flow:** [`.seal/E2E_FLOW.md`](.seal/E2E_FLOW.md) (generic) · [`E2E_FLOW.md`](E2E_FLOW.md) (this study)  
 **Protocol seal:** **SEALED 2026-08-24** (kill) · **SEALED 2026-08-24** (atlas)  
 **Confirmatory git SHA:** kill `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`) · atlas `2a74270a16685cbc4df5c45c293a7afb5b7665f5` (`2a74270`)  
-**OSF URL:** not yet (public lock may follow the kill SHA by a day)  
-**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–14 **complete**. Gates D, E, F **pass**. **Atlas Decide: paper as written.** **Scribe complete.** **Archive complete** ([`EXPLORE.md`](EXPLORE.md)). Manuscript: [`docs/manuscript.md`](docs/manuscript.md). Numbers: [`RESULTS.md`](RESULTS.md). **Human remaining:** OSF click + preprint/journal click (see below).  
+**OSF URL:** submitted 2026-08-24 17:04 (MDT) — **pending registration approval** (Secondary Data Preregistration, Chad Auld). Public URL after OSF approves; paste it here. Do **not** edit that registration to match results.  
+**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–14 **complete**. Gates D, E, F **pass**. **Atlas Decide: paper as written.** **Scribe complete.** **Archive complete** ([`EXPLORE.md`](EXPLORE.md)). Manuscript: [`docs/manuscript.md`](docs/manuscript.md). Numbers: [`RESULTS.md`](RESULTS.md). **Human remaining:** wait for OSF approval (paste URL here) + optional preprint/journal click (see below).  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
 **Decision:** **atlas-only** (2026-08-24). **Atlas paper as written** (2026-08-25): core + expansion; ICI chapter stays negative. Scribe ≤ `CLAIMS.md` non-claims + atlas frozen negative.
 
@@ -24,6 +24,7 @@
 | 2026-08-24 | Analyze nits applied; Units 01–08 packets written |
 | 2026-08-24 | Human confirmed CLAIMS / KILL / PROTOCOL; seal patches (MS4A1 fallback; Unit 05 tie cascade) |
 | 2026-08-24 | **Protocol sealed** at git SHA `3fbf310870c57247163edca35ed536ade3ea4301` |
+| 2026-08-24 | OSF Secondary Data Preregistration **submitted** 17:04 MDT (pending approval). Before ICI models (`c1a47f9` 21:32). Do not amend that registration |
 | 2026-08-24 | Unit 00 inventory: sources reachable; IMvigor 9/9 ECS; Census 4/5 types (BLCA → TISCH2); no outcome peek |
 | 2026-08-24 | Unit 01 detection table: 5 types; stop-kill detection half **false**; human marks Gate C |
 | 2026-08-24 | Human Gate C: **pass / continue**. Unit 02 scRNA states: 3 candidate buckets (B/plasma, malignant/epithelial, stromal/other); two-lineage rule holds; no contamination drops |
@@ -118,14 +119,14 @@ After **atlas** seal: same rule for `PROTOCOL-ATLAS.md` / `KILL-ATLAS.md`. Kill 
 - [x] Analyze pass (consistency) recorded below
 - [x] Human reads `CLAIMS.md`, `KILL.md`, `PROTOCOL.md` and agrees
 - [x] Seal date + git SHA + “do not edit confirmatory fields” (`3fbf310870c57247163edca35ed536ade3ea4301`)
-- [ ] OSF secondary-data prereg URL (public lock; may follow git SHA by a day)
+- [x] OSF secondary-data prereg **submitted** 2026-08-24 17:04 MDT (pending approval). Public URL not yet — paste when OSF approves.
 
 ## Human remaining (not agent-clickable)
 
 Do not reopen Gate B. Paste OSF URL into this file only.
 
-- [ ] **OSF.** Log in at [osf.io](https://osf.io) → Add new → Registration (not a Project). Template: Secondary Data Preregistration. Paste [`research/osf-secondary-prereg.md`](research/osf-secondary-prereg.md). Use the **after Decide** integrity wording. Add ORCID. Link git `3fbf310`. Then set **OSF URL** above and one ledger row.
-- [ ] **Preprint (optional).** bioRxiv/medRxiv: your ORCID, affiliation, competing-interests confirm, PDF/DOCX of [`docs/manuscript.md`](docs/manuscript.md). Do not add new ICI models.
+- [x] **OSF kill prereg.** Submitted 2026-08-24 17:04 MDT. Status: pending registration approval. **Do not update** the confirmatory text. When it is public, paste the `osf.io/…` URL into the STATUS header and one ledger row.
+- [ ] **Preprint (optional).** bioRxiv/medRxiv: your ORCID, affiliation, competing-interests confirm, PDF/DOCX of [`docs/manuscript.md`](docs/manuscript.md). Cite the OSF registration once it has a public URL. Do not add new ICI models.
 - [ ] **Journal (optional).** Same manuscript; claims ceiling still [`CLAIMS.md`](CLAIMS.md).
 
 ## After seal (execution)

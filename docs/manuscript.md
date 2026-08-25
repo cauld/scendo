@@ -1,7 +1,7 @@
 # Named lineage cell states of the human tumor endocannabinoidome
 
 Chad Auld  
-Correspondence: chadauld@gmail.com  
+Correspondence: chadauld+osf@gmail.com 
 Repository: https://github.com/cauld/scendo  
 License: [CC BY 4.0](../LICENSE)
 
