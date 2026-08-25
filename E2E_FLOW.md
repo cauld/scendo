@@ -5,7 +5,7 @@ This page is the **SCENDO instantiation** (units, datasets, Decide branches).
 
 Chat shorthand: **Explore → Question → Kill → Protocol → Clarify → Analyze → Seal (OSF) → Unit → Run → Converge → Decide → Archive.**
 
-**You are here:** see `STATUS.md`. Protocol **sealed**. Units 00–07 **done**. Primary **Stromal/other**. Gate A **pass**. Gate B **fail**. GEO replication reported (cannot rescue). **Next:** Unit 08 Converge, then human Decide. OSF prereg may follow the git SHA by a day.
+**You are here:** see `STATUS.md`. Protocol **sealed**. Kill test **done**. Primary **Stromal/other**. Gate A **pass**. Gate B **fail**. **Decision: atlas-only; ICI reported negative.** **Next:** Phase 2b atlas protocol (new lock; no ICI fishing). OSF prereg may follow the git SHA by a day.
 
 Lost on order? **[SEAL flow diagrams](docs/SEAL-FLOW.md)** — what to say, which unit is current.
 
@@ -60,4 +60,4 @@ Lost on order? **[SEAL flow diagrams](docs/SEAL-FLOW.md)** — what to say, whic
 | A fail (B-cell proxy) | Stop or descriptive only; no checkpoint claim |
 | A and B fail | Stop |
 
-No browser, large-model training, or GSE220635 until Decide (GSE220635 is post-Decide positive control).
+No browser, large-model training, or GSE220635 on this kill protocol. Atlas-only next is a **new** protocol. GSE220635 stays a full-paper positive control unless that protocol names it.

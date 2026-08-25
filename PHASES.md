@@ -2,7 +2,7 @@
 
 Generic loop: [`.seal/E2E_FLOW.md`](.seal/E2E_FLOW.md). Study instantiation: [`E2E_FLOW.md`](E2E_FLOW.md). This file is the checklist.
 
-## Phase 0 — Spec (now)
+## Phase 0 — Spec (done)
 
 | Step | Workflow | Output |
 |---|---|---|
@@ -28,17 +28,17 @@ Units in `units/` (Operator). Order is dependency order.
 6. Name primary non-B state (if any) **before** ICI outcomes  
 7. IMvigor210 Gate B  
 8. Melanoma replication (descriptive)  
-9. Converge + Decide  
+9. Converge + Decide — **Done 2026-08-24.** Decision: **atlas-only**
 
-**Exit:** One of: full paper / atlas-only / stop.
+**Exit:** **atlas-only** (A pass, B fail). ICI reported negative. Full paper closed.
 
 ## Phase 2a — Stop
 
 Write a short kill note. Do not build a browser.
 
-## Phase 2b — Atlas-only (if A pass, B fail)
+## Phase 2b — Atlas-only (current)
 
-New protocol + new lock: census-scale map, named states. No ICI fishing.
+Chosen 2026-08-24. New protocol + new lock: census-scale map, named states. No ICI fishing. Do not reopen Gate B.
 
 ## Phase 2c — Full paper (if A and B pass)
 

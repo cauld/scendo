@@ -1,6 +1,6 @@
 # SEAL flow — what order, what to run
 
-Look here when the sequence is unclear. **You are here** is always `STATUS.md`. Today: Units 00–07 done; Gate A **pass**, Gate B **fail**. **Say `Run` for Unit 08** (Converge), then **Decide**.
+Look here when the sequence is unclear. **You are here** is always `STATUS.md`. Today: **Decide is atlas-only.** Kill test done. Gate A **pass**, Gate B **fail**. **Next:** new atlas protocol (Phase 2b). No ICI fishing.
 
 Generic kernel: [`.seal/E2E_FLOW.md`](../.seal/E2E_FLOW.md). This study: [`E2E_FLOW.md`](../E2E_FLOW.md). Chat cheat-sheet: [`.seal/workflows.md`](../.seal/workflows.md).
 
@@ -8,26 +8,27 @@ Generic kernel: [`.seal/E2E_FLOW.md`](../.seal/E2E_FLOW.md). This study: [`E2E_F
 
 Green = finished. Yellow = current. Grey = later.
 
-![SEAL loop: lock, then run units, then Decide](diagrams/seal-loop.png)
+![SEAL loop: Decide is atlas-only; next is a new protocol](diagrams/seal-loop.png)
 
 ## This study’s units
 
-Kill-test units 00–07 are done. GEO cannot rescue Gate B.
+Kill-test units 00–08 are done. Decision: atlas-only; ICI reported negative.
 
-![SCENDO units 00–08 with Unit 08 current](diagrams/scendo-units.png)
+![SCENDO units 00–08 done; Decide atlas-only](diagrams/scendo-units.png)
 
 | Say in chat | When | What happens |
 |---|---|---|
-| **Run** | After Seal, one unit at a time | Agent executes the current unit in `STATUS.md` |
+| **Run** | After Seal, one unit at a time | Done through Unit 08 |
 | **Unit** | Packet missing or wrong | Writes/updates `units/<id>.md` only |
-| **Converge** | After Unit 08 outputs exist | Check results against the sealed protocol |
-| **Decide** | After Converge | You pick stop / atlas-only / full paper |
-| Explore / Question / Kill / Protocol / Clarify / Analyze / Seal | Already done | Do not re-open unless a dated amendment |
+| **Converge** | After Unit 08 outputs exist | **Done** — `research/08-converge.md` |
+| **Decide** | After Converge | **Done** — atlas-only (2026-08-24) |
+| **Protocol** | After this Decide | New atlas protocol + new lock (Phase 2b) |
+| Explore / Question / Kill / Clarify / Analyze / Seal | Kill phase done | Do not re-open the kill protocol unless a dated amendment |
 
-OSF prereg can go up any time after the git SHA. It is not a Unit 01 blocker. Spark is after Decide, full-paper path only.
+OSF prereg can go up any time after the git SHA. Spark / browser / GSE220635 are not this branch unless the atlas protocol names them.
 
 ## What to run right now
 
-![What to run: say Run for Unit 08 Converge, then Decide](diagrams/what-to-run.png)
+![What to run: atlas protocol next](diagrams/what-to-run.png)
 
-Stay on this laptop. Gate A pass, Gate B fail. Say `Run` for Unit 08 (Converge). Then **Decide**: atlas-only vs stop (full paper path is closed unless you amend).
+Stay on this laptop. **Decision: atlas-only.** Say **Protocol** for the census-scale map. Do not reopen ICI outcomes to hunt a Gate B pass.

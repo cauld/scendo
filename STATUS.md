@@ -5,9 +5,9 @@
 **Protocol seal:** **SEALED 2026-08-24**  
 **Confirmatory git SHA:** `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`)  
 **OSF URL:** not yet (public lock may follow this SHA by a day)  
-**Current stage:** Units 00–07 done. Primary **Stromal/other**. Gate A **pass**. Gate B **fail**. Melanoma GEO reported (cannot rescue). **Next:** Unit 08 Converge, then human **Decide** (atlas-only path if Decide follows A pass / B fail).  
+**Current stage:** Kill test **complete**. Primary **Stromal/other**. Gate C **pass / continue**. Gate A **pass**. Gate B **fail**. **Decision: atlas-only; ICI reported negative.** Full paper closed. **Next:** new atlas protocol + new lock (Phase 2b). No ICI fishing.  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
-**Decision:** none yet (full paper vs atlas-only vs stop)
+**Decision:** **atlas-only** (2026-08-24). ICI chapter stays negative. Scribe ≤ `CLAIMS.md`.
 
 **External review brief:** [`PLAN.md`](PLAN.md)
 
@@ -34,6 +34,8 @@
 | 2026-08-24 | Unit 06 IMvigor210: Model 1 n=298 ECS OR 1.189 (0.551–2.563) CI includes 1; VIF(ECS)=1.36. Operator Gate B numbers fail. Human marks Gate B |
 | 2026-08-24 | Human Gate B: **fail**. Unit 07 melanoma GEO next (report only) |
 | 2026-08-24 | Unit 07 GSE78220 n=26 ECS OR 0.47 (0.02–11.7); GSE91061 n=49 ECS OR 0.60 (0.07–5.51); both CIs include 1. Does not rescue Gate B |
+| 2026-08-24 | Unit 08 Converge: protocol lock and outcome wall hold. Mapped Decide: **atlas-only; ICI negative**. Human Decide next |
+| 2026-08-24 | **Decide: atlas-only.** ICI reported negative. Full paper closed. Next: Phase 2b atlas protocol (new lock; no ICI fishing) |
 
 ## Analyze (2026-08-24)
 
@@ -85,4 +87,38 @@ After seal: Operator runs units; new ideas → `EXPLORE.md` or a dated protocol 
 - [x] Unit 04 TCGA confound complete: `research/04-tcga-confound.md`. Both non-B candidates qualify (pooled and BLCA |r| < 0.6). Residual not used.
 - [x] Unit 05 primary named: `research/05-primary-state.md`. **Stromal/other**. Cascade step 2 (present in more of the five types). Human Gate A: **pass**. Frozen in git before Unit 06.
 - [x] Unit 06 IMvigor210 complete: `research/06-imvigor210.md`. Model 1 n=298 ECS OR 1.189 (0.551–2.563) CI includes 1; VIF(ECS)=1.360. Human Gate B: **fail**.
-- [x] Unit 07 melanoma GEO complete: `research/07-melanoma-geo.md`. GSE78220 n=26; GSE91061 n=49. ECS CIs include 1. Cannot rescue Gate B. **Next:** Unit 08 Converge + Decide.
+- [x] Unit 07 melanoma GEO complete: `research/07-melanoma-geo.md`. GSE78220 n=26; GSE91061 n=49. ECS CIs include 1. Cannot rescue Gate B.
+- [x] Unit 08 Converge complete: `research/08-converge.md`. Protocol lock and outcome wall hold. Mapped Decide: **atlas-only; ICI reported negative**.
+- [x] Human Decide: **atlas-only** (2026-08-24). ICI chapter reported negative. Full paper closed unless a dated amendment reopens Gate B.
+
+## Converge (2026-08-24)
+
+Operator audit vs sealed `KILL.md` / `PROTOCOL.md`. Detail: [`research/08-converge.md`](research/08-converge.md).
+
+| Gate | Operator draft | Human mark |
+|---|---|---|
+| C detectability | Stop-kill detection half false; no-UMAP-atlas rule false | **Pass / continue** |
+| A states ≠ B cells | 3 buckets; both non-B qualify; primary Stromal/other | **Pass** |
+| B ICI ≠ confound | Model 1 ECS CI includes 1; VIF(ECS)=1.360 | **Fail** |
+
+GEO, OS, unadjusted, Model 2, and deconvolution cannot rescue Gate B. Confirmatory files were not edited to match figures.
+
+**Mapped Decide (`KILL.md`):** A pass, B fail → **atlas-only; ICI as negative**. Full paper path is closed unless a dated amendment. Scribe ≤ `CLAIMS.md`.
+
+## Human Decide
+
+- [X] Atlas-only (mapped path; ICI chapter reported negative) — marked 2026-08-24
+- [ ] Stop (no atlas paper)
+- [ ] Full paper — **closed** unless a dated protocol amendment reopens Gate B
+
+## Scribe bound (after Decide)
+
+May say, inside `CLAIMS.md`:
+
+1. Human tumor ECS is visible as **lineage cell states** (nine core genes), not only CB1-brain / CB2-immune slogans.
+2. At least one non-B state (**Stromal/other**) is distinguishable from B-cell / TLS abundance on the Gate A tests.
+3. The **frozen** Stromal/other score **does not** associate with IMvigor210 **response** after B-cell / TLS / CD8 adjustment (Model 1 ECS OR 1.189, 95% CI 0.551–2.563). OS, unadjusted, Model 2, deconvolution, and melanoma GEO do not carry this claim.
+
+Must not say: cannabis/CBD treats cancer; CB2 **is** a clinical checkpoint; patients should change cannabis during PD-1; melanoma GEO validates a biomarker; an OS-only or unadjusted signal is a checkpoint association.
+
+**Next (Phase 2b):** new protocol + new lock for a census-scale map. Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay out until that protocol names them.

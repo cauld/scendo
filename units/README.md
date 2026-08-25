@@ -2,7 +2,7 @@
 
 A **unit** is BMAD’s story file without Agile: everything the Operator needs in one place. One unit, one run, one note.
 
-Protocol is **locked**. Units 00–07 are **done**. Next: Unit 08 Converge + Decide. Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
+Protocol is **locked**. Units 00–08 **done**. **Decision: atlas-only** (ICI negative). Next: Phase 2b atlas protocol (new lock). Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
 
 | ID | Title | Gate | Depends on |
 |---|---|---|---|

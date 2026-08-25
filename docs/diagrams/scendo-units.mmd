@@ -12,13 +12,19 @@ flowchart TB
   subgraph after["Outcomes after Gate A pass + name in git"]
     direction LR
     U06["06 IMvigor210<br/>Gate B fail"] --> U07["07 Melanoma GEO<br/>report only"]
-    U07 --> U08["08 Converge<br/>+ Decide"]
+    U07 --> U08["08 Converge"]
+    U08 --> D["Decide<br/>atlas-only"]
+  end
+
+  subgraph next["Phase 2b"]
+    P["New atlas protocol<br/>new lock; no ICI fishing"]
   end
 
   U05 --> U06
+  D --> P
 
   classDef done fill:#E4EDE4,stroke:#3D5A3D,color:#1A1A1A
   classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
   classDef later fill:#EEEEEE,stroke:#666666,color:#1A1A1A
-  class U00,U01,U02,U03,U04,U05,U06,U07 done
-  class U08 now
+  class U00,U01,U02,U03,U04,U05,U06,U07,U08,D done
+  class P now
