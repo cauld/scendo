@@ -2,7 +2,7 @@
 
 A **unit** is BMAD’s story file without Agile: everything the Operator needs in one place. One unit, one run, one note.
 
-Kill protocol is **locked**. Units 00–08 **done**. **Decision: atlas-only**. Atlas protocol is **locked** (`PROTOCOL-ATLAS.md`). Next: **Run** Unit 10. Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
+Kill protocol is **locked**. Units 00–08 **done**. **Decision: atlas-only**. Atlas protocol is **locked** (`PROTOCOL-ATLAS.md`). Units 10–11 **done**. Gate D **pass**. Next: **Run** Unit 12. Diagrams: [`docs/SEAL-FLOW.md`](../docs/SEAL-FLOW.md).
 
 | ID | Title | Gate | Depends on |
 |---|---|---|---|

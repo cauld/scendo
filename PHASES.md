@@ -46,7 +46,7 @@ Chosen 2026-08-24. Atlas lock **sealed**:
 | Clarify | **Done 2026-08-24** | Five defaults accepted (see `PROTOCOL-ATLAS.md` amendments) |
 | Analyze | **Pass 2026-08-24** | Note in `STATUS.md` |
 | Seal | **Done 2026-08-24** | Git SHA in `STATUS.md` (kill SHA `3fbf310` unchanged) |
-| Units 10–14 | After Seal | Reproduce core; expand Census; stromal display; converge |
+| Units 10–14 | After Seal | Units 10–11 **done**; Gate D **pass**; Unit 12 next |
 
 **Must not:** reopen Gate B; add confirmatory ECS genes; browser / scGPT / GSE220635 unless a later amendment names them.
 

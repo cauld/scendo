@@ -1,7 +1,7 @@
 ---
 id: 10
 role: Operator
-status: ready
+status: done
 reads:
   - PROTOCOL-ATLAS.md
   - KILL-ATLAS.md
@@ -33,4 +33,6 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 complete.** `research/10-reproduce-core.md`. Runner: `uv run python pipeline/reproduce_10.py`. Census `2025-11-08` / BLCA TISCH2+GEO `GSE130001` (Unit 02 cell-level pin). No ICI files. No NMF / clustering / DE.
+- Kept ECS-state buckets still **B/plasma** (melanoma), **Malignant/epithelial** (BLCA, BRCA, CRC, NSCLC), **Stromal/other** (all five). Myeloid / T/NK not named. Primary remains **Stromal/other**. Nine genes unchanged.
+- Vs Unit 02: **0** kept↔dropped flips; **0** n/rank mismatches; max |Δ mean ECS| = 0; max |Δ contamination %| = 0. Operator Gate D numbers **hold**. **2026-08-24 human Gate D: Pass.** **Next:** Unit 11 expansion inventory (Gate E).

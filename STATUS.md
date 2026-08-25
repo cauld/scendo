@@ -5,7 +5,7 @@
 **Protocol seal:** **SEALED 2026-08-24** (kill) · **SEALED 2026-08-24** (atlas)  
 **Confirmatory git SHA:** kill `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`) · atlas `2a74270a16685cbc4df5c45c293a7afb5b7665f5` (`2a74270`)  
 **OSF URL:** not yet (public lock may follow the kill SHA by a day)  
-**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. **Next:** **Run** Unit 10 (Gate D).  
+**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–11 **complete**. Human Gate D: **pass**. **Next:** **Run** Unit 12 (Gate E tables).  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
 **Decision:** **atlas-only** (2026-08-24). ICI chapter stays negative. Scribe ≤ `CLAIMS.md` non-claims + atlas frozen negative.
 
@@ -40,6 +40,9 @@
 | 2026-08-24 | Atlas Clarify: five defaults accepted in `PROTOCOL-ATLAS.md` (expansion list + 10k; Census-only; no UMAP/browser; neighbors exploratory; stromal table display-only) |
 | 2026-08-24 | Atlas Analyze pass: atlas artifacts consistent with kill freeze (note below) |
 | 2026-08-24 | **Atlas protocol sealed** at git SHA `2a74270a16685cbc4df5c45c293a7afb5b7665f5` (kill SHA `3fbf310` unchanged) |
+| 2026-08-24 | Unit 10 reproduce core: same three buckets (B/plasma, Malignant/epithelial, Stromal/other); primary **Stromal/other**; 0 kept↔dropped flips; 0 numeric drift vs Unit 02. No ICI files. Human marks Gate D |
+| 2026-08-24 | Human Gate D: **pass**. Same three buckets; primary **Stromal/other**. Unit 11 expansion inventory next |
+| 2026-08-24 | Unit 11 expansion inventory: include OV, PRAD, KIRC, STAD, HNSC, GBM (Census n ≥ 10k). Skip PAAD, LIHC, ESCA, UCEC, THCA, CESC (missing or n < 10k). No extras. No TISCH2. Unit 12 next |
 
 ## Analyze (2026-08-24)
 
@@ -151,7 +154,7 @@ May say, inside `CLAIMS.md`:
 
 Must not say: cannabis/CBD treats cancer; CB2 **is** a clinical checkpoint; patients should change cannabis during PD-1; melanoma GEO validates a biomarker; an OS-only or unadjusted signal is a checkpoint association.
 
-**Next (Phase 2b):** atlas protocol **sealed**. Say **Run** (Unit 10, Gate D). Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay out unless that protocol is amended to name them.
+**Next (Phase 2b):** Unit 11 **done**. Say **Run** (Unit 12, Gate E tables). Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay out unless that protocol is amended to name them.
 
 ## Atlas lock (Phase 2b)
 
@@ -163,9 +166,14 @@ Sealed: [`PROTOCOL-ATLAS.md`](PROTOCOL-ATLAS.md) · [`KILL-ATLAS.md`](KILL-ATLAS
 
 ## After atlas seal (execution)
 
-- [ ] Unit 10 reproduce core (Gate D)
-- [ ] Unit 11 expansion inventory (Gate E)
+- [x] Unit 10 reproduce core complete: `research/10-reproduce-core.md`. Same three buckets; primary **Stromal/other**; no kept↔dropped flip; no numeric drift. Human Gate D: **pass**.
+- [x] Unit 11 expansion inventory complete: `research/11-expansion-inventory.md`. Include OV, PRAD, KIRC, STAD, HNSC, GBM. Skip PAAD (missing), LIHC (n < 10,000), ESCA / UCEC / THCA / CESC (missing). No extras. No TISCH2.
 - [ ] Unit 12 expansion states (Gate E)
 - [ ] Unit 13 stromal figures
 - [ ] Unit 14 converge + frozen ICI (Gate F)
+
+## Human Gate D
+
+- [X] Pass (same three buckets; primary Stromal/other) — marked 2026-08-24
+- [ ] Fail (kept↔dropped flip / new confirmatory bucket / genes added / primary renamed)
 

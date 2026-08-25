@@ -1,7 +1,7 @@
 # SCENDO atlas plan (external review)
 
 **Study:** SCENDO — atlas-only paper after kill.  
-**Stage:** Protocol **SEALED 2026-08-24**. Clarify and Analyze done. Kill test is done and frozen (SHA `3fbf310`). Next: **Run** Units 10–14.  
+**Stage:** Protocol **SEALED 2026-08-24**. Clarify and Analyze done. Kill test is done and frozen (SHA `3fbf310`). Units 10–11 **done**. Gate D **pass**. Next: **Run** Unit 12.  
 **Audience:** Independent reviewer (computational oncology / immunology).  
 **Ask:** Does this frozen atlas protocol match `PROTOCOL-ATLAS.md` / `KILL-ATLAS.md`?
 
@@ -47,7 +47,7 @@ Expansion types (Census, skip if missing or n < 10k): PAAD, OV, PRAD, KIRC, LIHC
 
 ## 5. Execution
 
-Units 10–14 in `units/`. Laptop, Python, `pipeline/`. Clarify **done**. Analyze **pass**. Seal **done** (2026-08-24). Next: **Run** Unit 10.
+Units 10–14 in `units/`. Laptop, Python, `pipeline/`. Clarify **done**. Analyze **pass**. Seal **done** (2026-08-24). Units 10–11 **done**. Gate D **pass**. Next: **Run** Unit 12.
 
 ## 6. Frozen design (this lock)
 

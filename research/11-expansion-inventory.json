@@ -1,0 +1,154 @@
+{
+  "run_date": "2026-08-24",
+  "census_version": "2025-11-08",
+  "n_min": 10000,
+  "include": [
+    "OV",
+    "PRAD",
+    "KIRC",
+    "STAD",
+    "HNSC",
+    "GBM"
+  ],
+  "skip": [
+    {
+      "cancer_type": "PAAD",
+      "reason": "missing in Census"
+    },
+    {
+      "cancer_type": "LIHC",
+      "reason": "n < 10,000"
+    },
+    {
+      "cancer_type": "ESCA",
+      "reason": "missing in Census"
+    },
+    {
+      "cancer_type": "UCEC",
+      "reason": "missing in Census"
+    },
+    {
+      "cancer_type": "THCA",
+      "reason": "missing in Census"
+    },
+    {
+      "cancer_type": "CESC",
+      "reason": "missing in Census"
+    }
+  ],
+  "types": [
+    {
+      "cancer_type": "PAAD",
+      "protocol_name": "pancreatic adenocarcinoma",
+      "disease_strings": [],
+      "n_cells": 0,
+      "decision": "skip",
+      "reason": "missing in Census"
+    },
+    {
+      "cancer_type": "OV",
+      "protocol_name": "ovarian",
+      "disease_strings": [
+        "malignant ovarian serous tumor",
+        "ovarian cancer"
+      ],
+      "n_cells": 984988,
+      "decision": "include",
+      "reason": "n \u2265 10,000"
+    },
+    {
+      "cancer_type": "PRAD",
+      "protocol_name": "prostate",
+      "disease_strings": [
+        "prostatic acinar adenocarcinoma"
+      ],
+      "n_cells": 68322,
+      "decision": "include",
+      "reason": "n \u2265 10,000"
+    },
+    {
+      "cancer_type": "KIRC",
+      "protocol_name": "clear cell kidney",
+      "disease_strings": [
+        "clear cell renal carcinoma"
+      ],
+      "n_cells": 187792,
+      "decision": "include",
+      "reason": "n \u2265 10,000"
+    },
+    {
+      "cancer_type": "LIHC",
+      "protocol_name": "hepatocellular",
+      "disease_strings": [
+        "hepatocellular carcinoma"
+      ],
+      "n_cells": 0,
+      "decision": "skip",
+      "reason": "n < 10,000"
+    },
+    {
+      "cancer_type": "STAD",
+      "protocol_name": "stomach",
+      "disease_strings": [
+        "gastric cancer"
+      ],
+      "n_cells": 217923,
+      "decision": "include",
+      "reason": "n \u2265 10,000"
+    },
+    {
+      "cancer_type": "ESCA",
+      "protocol_name": "esophageal",
+      "disease_strings": [],
+      "n_cells": 0,
+      "decision": "skip",
+      "reason": "missing in Census"
+    },
+    {
+      "cancer_type": "HNSC",
+      "protocol_name": "head and neck squamous",
+      "disease_strings": [
+        "oral cavity squamous cell carcinoma",
+        "oropharynx squamous cell carcinoma",
+        "tongue cancer"
+      ],
+      "n_cells": 82378,
+      "decision": "include",
+      "reason": "n \u2265 10,000"
+    },
+    {
+      "cancer_type": "GBM",
+      "protocol_name": "glioblastoma",
+      "disease_strings": [
+        "glioblastoma"
+      ],
+      "n_cells": 1363983,
+      "decision": "include",
+      "reason": "n \u2265 10,000"
+    },
+    {
+      "cancer_type": "UCEC",
+      "protocol_name": "endometrial",
+      "disease_strings": [],
+      "n_cells": 0,
+      "decision": "skip",
+      "reason": "missing in Census"
+    },
+    {
+      "cancer_type": "THCA",
+      "protocol_name": "thyroid",
+      "disease_strings": [],
+      "n_cells": 0,
+      "decision": "skip",
+      "reason": "missing in Census"
+    },
+    {
+      "cancer_type": "CESC",
+      "protocol_name": "cervical",
+      "disease_strings": [],
+      "n_cells": 0,
+      "decision": "skip",
+      "reason": "missing in Census"
+    }
+  ]
+}

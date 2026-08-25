@@ -15,7 +15,7 @@ flowchart TB
 
   subgraph run["Atlas execute — NOW"]
     direction LR
-    U10["10 Reproduce<br/>Gate D"] --> U11["11 Inventory"]
+    U10["10 Reproduce<br/>Gate D pass"] --> U11["11 Inventory"]
     U11 --> U12["12 Expansion<br/>Gate E"]
     U12 --> U13["13 Figures"]
     U13 --> U14["14 Converge<br/>Gate F"]
@@ -27,6 +27,6 @@ flowchart TB
   classDef done fill:#E4EDE4,stroke:#3D5A3D,color:#1A1A1A
   classDef now fill:#FFF3C4,stroke:#8A6D00,color:#1A1A1A
   classDef later fill:#EEEEEE,stroke:#666666,color:#1A1A1A
-  class U00,U06,U08,PR,CL,AN,SE done
-  class U10 now
-  class U11,U12,U13,U14 later
+  class U00,U06,U08,PR,CL,AN,SE,U10,U11 done
+  class U12 now
+  class U13,U14 later

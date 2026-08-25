@@ -1,7 +1,7 @@
 ---
 id: 11
 role: Operator
-status: ready
+status: done
 reads:
   - PROTOCOL-ATLAS.md
   - research/data-inventory.md
@@ -29,4 +29,7 @@ must_not:
 
 ## Notes (after run)
 
--
+- **2026-08-24 complete.** `research/11-expansion-inventory.md` (+ `research/11-expansion-inventory.json` for Unit 12). Runner: `uv run python pipeline/inventory_11.py`. Census `2025-11-08`, `is_primary_data == True`, same culture/organoid/cell-line drop as Unit 01. No TISCH2. No extra types. No ICI files.
+- **Include (n ≥ 10,000):** `OV` 984,988; `PRAD` 68,322; `KIRC` 187,792; `STAD` 217,923; `HNSC` 82,378; `GBM` 1,363,983.
+- **Skip:** `PAAD` missing in Census; `LIHC` n < 10,000 (HCC label present, 0 cells); `ESCA`, `UCEC`, `THCA`, `CESC` missing in Census. Did not substitute generic RCC, liver cancer, cholangiocarcinoma, or `malignant pancreatic neoplasm`.
+- Every locked type is include or skip. **Next:** Unit 12 expansion states (Gate E tables).
