@@ -70,4 +70,4 @@ Recorded in unit notes. They do not change confirmatory fields.
 
 ## Still open (not a leftover idea)
 
-OSF secondary-data prereg URL is **not yet** posted. That is the public lock for kill SHA `3fbf310`. It may follow the git SHA by a day. It is not an exploratory analysis.
+None. Public lock: [OSF `c8kpx`](https://osf.io/c8kpx) (DOI [10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX)), kill SHA `3fbf310`. Optional bioRxiv/journal is shipping, not exploration.

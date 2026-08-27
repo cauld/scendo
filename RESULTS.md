@@ -2,7 +2,7 @@
 
 Confirmatory extract for the Scribe. Numbers below appear in `STATUS.md` as confirmatory, or are copied from sealed-protocol unit notes. Do not add exploratory items from `EXPLORE.md`. Manuscript: [`docs/manuscript.md`](docs/manuscript.md).
 
-**Bound.** `CLAIMS.md` non-claims plus `PROTOCOL-ATLAS.md` frozen ICI negative. Kill SHA `3fbf310`. Atlas SHA `2a74270`. Decide (2026-08-25): atlas paper as written (core + expansion; ICI negative chapter).
+**Bound.** `CLAIMS.md` non-claims plus `PROTOCOL-ATLAS.md` frozen ICI negative. Kill SHA `3fbf310`. Atlas SHA `2a74270`. OSF: [osf.io/c8kpx](https://osf.io/c8kpx). Decide (2026-08-25): atlas paper as written (core + expansion; ICI negative chapter).
 
 **May claim**
 

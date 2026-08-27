@@ -1,6 +1,6 @@
 # OSF secondary-data preregistration (paste packet)
 
-**Status:** Ready for human OSF submit. Not a substitute for the sealed protocol.  
+**Status:** **Public.** https://osf.io/c8kpx · DOI [10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX) (registered 2026-08-24). Not a substitute for the sealed protocol. Paste packet below is historical.  
 **Confirmatory SHA (the freeze):** `3fbf310870c57247163edca35ed536ade3ea4301` (2026-08-24)  
 **Repo:** https://github.com/cauld/scendo  
 **Files that win if anything conflicts:** `PROTOCOL.md`, `KILL.md`, `CLAIMS.md` at that SHA.
@@ -19,7 +19,7 @@ OSF now is a **public timestamp of that already-sealed plan**, not a claim that 
 
 Permalink to the freeze: `https://github.com/cauld/scendo/tree/3fbf310870c57247163edca35ed536ade3ea4301`
 
-After OSF gives a URL, paste it into `STATUS.md` only (header **OSF URL** + one ledger row). Do not edit CONFIRMATORY protocol fields.
+Done: URL is in `STATUS.md` (https://osf.io/c8kpx). Do not edit CONFIRMATORY protocol fields.
 
 ---
 
@@ -253,10 +253,4 @@ The registrant states that the confirmatory protocol was sealed at git SHA `3fbf
 
 ## After OSF returns a URL
 
-Add to `STATUS.md` only:
-
-| Date | Event |
-|---|---|
-| YYYY-MM-DD | OSF secondary-data prereg: https://osf.io/xxxx |
-
-Set **OSF URL** in the STATUS header. Do not edit `PROTOCOL.md` confirmatory sections.
+**Done 2026-08-27.** Public URL in `STATUS.md`: https://osf.io/c8kpx (DOI 10.17605/OSF.IO/C8KPX). Do not edit `PROTOCOL.md` confirmatory sections.

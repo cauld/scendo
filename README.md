@@ -10,8 +10,9 @@ Public-data computational study. No wet lab. Atlas paper: named ECS **lineage ce
 | [`RESULTS.md`](RESULTS.md) | Confirmatory numbers |
 | [`CLAIMS.md`](CLAIMS.md) | What we may / may not say |
 | [`STATUS.md`](STATUS.md) | You are here; freeze SHAs |
+| [OSF `c8kpx`](https://osf.io/c8kpx) | Public prereg (DOI [10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX)) |
 | [`EXPLORE.md`](EXPLORE.md) | Not confirmatory (archived leftovers) |
-| [`research/osf-secondary-prereg.md`](research/osf-secondary-prereg.md) | OSF paste packet |
+| [`research/osf-secondary-prereg.md`](research/osf-secondary-prereg.md) | OSF paste packet (historical) |
 
 Kill protocol freeze: git `3fbf310` (2026-08-24). Atlas protocol freeze: git `2a74270`. ICI chapter is Gate B **fail** (Model 1 n=298, ECS OR 1.189, 95% CI 0.551–2.563).
 

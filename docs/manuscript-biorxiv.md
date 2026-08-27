@@ -1,11 +1,12 @@
 # Named lineage cell states of the human tumor endocannabinoidome
 
 Chad Auld  
-Correspondence: chadauld+osf@gmail.com 
+Independent researcher  
+Correspondence: chadauld+osf@gmail.com  
 Repository: https://github.com/cauld/scendo  
-License: [CC BY 4.0](../LICENSE)
+License: CC BY 4.0
 
-**SCENDO atlas paper.** Core five-type map plus Census expansion; frozen ICI chapter reported negative. Confirmatory numbers: [`RESULTS.md`](../RESULTS.md). Claims ceiling: [`CLAIMS.md`](../CLAIMS.md). Protocol freeze: kill git `3fbf310` (2026-08-24); atlas git `2a74270`. OSF prereg: [osf.io/c8kpx](https://osf.io/c8kpx) ([doi:10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX)).
+This is the atlas-only report of a pre-specified kill test. Confirmatory numbers and protocol files are in the GitHub repository. Protocol freeze: kill git `3fbf310` (24 August 2026); atlas git `2a74270`. OSF preregistration: https://doi.org/10.17605/OSF.IO/C8KPX.
 
 ## Abstract
 
@@ -27,15 +28,15 @@ We do not claim that cannabis or CBD/THC treats cancer, that patients should cha
 
 ### A nine-gene ECS is detectable as lineage means, not as a *CNR2*-only slogan
 
-The confirmatory gene list is `CNR1, CNR2, GPR55, TRPV1, FAAH, MGLL, DAGLA, DAGLB, NAPEPLD`. Neighbor genes stay out of the score. scRNA scores are available-case means of **raw counts** inside existing lineage labels (no new clustering, no NMF, no DE). A lineage has an ECS state in a cancer type if at least one core gene is detected (count > 0) in ≥5% of that lineage’s cells and the lineage mean is highest or second-highest among non-empty buckets, after a B-lineage contamination screen (`MS4A1`, else `CD19`, else `CD79A`; ≥10% drops a non-B lineage in that dataset).
+The confirmatory gene list is *CNR1*, *CNR2*, *GPR55*, *TRPV1*, *FAAH*, *MGLL*, *DAGLA*, *DAGLB*, *NAPEPLD*. Neighbor genes stay out of the score. scRNA scores are available-case means of **raw counts** inside existing lineage labels (no new clustering, no NMF, no DE). A lineage has an ECS state in a cancer type if at least one core gene is detected (count > 0) in ≥5% of that lineage’s cells and the lineage mean is highest or second-highest among non-empty buckets, after a B-lineage contamination screen (*MS4A1*, else *CD19*, else *CD79A*; ≥10% drops a non-B lineage in that dataset).
 
-On the five core types (NSCLC, melanoma, CRC, BRCA from Census; BLCA from pinned TISCH2+GEO `GSE130001`), detection of *CNR2*, *MGLL*, and *FAAH* is not uniformly dark in every non-B lineage. The map is tables (and heatmaps of those tables). There is no UMAP, Harmony, or scVI atlas in this protocol.
+On the five core types (NSCLC, melanoma, CRC, BRCA from Census; BLCA from pinned TISCH2+GEO GSE130001), detection of *CNR2*, *MGLL*, and *FAAH* is not uniformly dark in every non-B lineage. The map is tables (and heatmaps of those tables). There is no UMAP, Harmony, or scVI atlas in this protocol.
 
 ### Three named states; primary is Stromal/other
 
 After the ECS-state rule and contamination filter, the buckets with an ECS state are **B/plasma** (melanoma), **Malignant/epithelial** (BLCA, BRCA, CRC, NSCLC), and **Stromal/other** (all five). Re-running the core catalog on the same pins reproduced those three buckets with no kept↔dropped flip and no numeric drift at published precision.
 
-Both non-B buckets qualify on bulk confound tests. Pooled TCGA (n=3664) Pearson r vs B-cell signature = 0.417 and vs TLS = 0.383; TCGA-BLCA (n=426) r_B = 0.361 and r_TLS = 0.263. Residualization was not used. Because bulk TCGA scores the same nine genes for every non-B candidate, the first cascade step is a tie; **Stromal/other** was named primary because it met the ECS-state rule in all five core types (vs four for Malignant/epithelial). That name was committed before IMvigor210 or GEO phenotypes were opened. Gate B always uses the continuous **raw** nine-gene score.
+Both non-B buckets qualify on bulk confound tests. Pooled TCGA (n=3664) Pearson r vs B-cell signature = 0.417 and vs TLS = 0.383; TCGA-BLCA (n=426) r~B~ = 0.361 and r~TLS~ = 0.263. Residualization was not used. Because bulk TCGA scores the same nine genes for every non-B candidate, the first cascade step is a tie; **Stromal/other** was named primary because it met the ECS-state rule in all five core types (vs four for Malignant/epithelial). That name was committed before IMvigor210 or GEO phenotypes were opened. Gate B always uses the continuous **raw** nine-gene score.
 
 ### Expansion is pre-specified, not shopped
 
@@ -47,11 +48,11 @@ On expansion tables, Malignant/epithelial and Stromal/other continue as the same
 
 Mean core-ECS by type and lineage bucket:
 
-![Mean core-ECS by type and lineage bucket](diagrams/13-mean-ecs.png)
+![Figure 1. Mean core-ECS by type and lineage bucket](diagrams/13-mean-ecs.png)
 
 Nine-gene detection inside Stromal/other:
 
-![Nine-gene detection in Stromal/other](diagrams/13-detection-stromal.png)
+![Figure 2. Nine-gene detection in Stromal/other](diagrams/13-detection-stromal.png)
 
 ### Stromal/other is a bucket, not a fibroblast paper
 
@@ -59,7 +60,7 @@ Among cells already assigned to Stromal/other, existing Census or TISCH2 labels 
 
 Composition varies by type (fibroblast-rich in OV, BLCA, BRCA; unmatched-heavy in STAD, GBM, CRC, KIRC). Unmatched names are the labels the atlas already had (for example `unknown`, microglia, stem cell). They are not clustered into a fourth named state.
 
-![Stromal/other subtype composition](diagrams/13-stromal-composition.png)
+![Figure 3. Stromal/other subtype composition](diagrams/13-stromal-composition.png)
 
 ### Frozen IMvigor210 test does not associate with response after B, TLS, and CD8
 
@@ -84,15 +85,15 @@ That negative is complete, not a prelude to fishing. Melanoma GEO does not “va
 
 Limitations follow the lock. Expansion is Census-only; six locked types are skipped rather than filled from another database. Melanoma core n is small relative to BRCA or NSCLC. Stromal/other includes unmatched labels by design. There is no embedding, no browser, and no causal test of CB2. Neighbor enzymes and receptors were not added after seeing outcomes.
 
-What this study may still say is listed in `CLAIMS.md`: cell states, a non-B state distinct from B/TLS abundance, and a frozen negative IMvigor210 response test. What it may not say: cannabis as therapy; CB2 as a clinical checkpoint; a practice change during PD-1.
+What this study may still say is listed in `CLAIMS.md` in the repository: cell states, a non-B state distinct from B/TLS abundance, and a frozen negative IMvigor210 response test. What it may not say: cannabis as therapy; CB2 as a clinical checkpoint; a practice change during PD-1.
 
 ## Methods
 
-**Protocols.** Kill confirmatory methods: [`PROTOCOL.md`](../PROTOCOL.md) (git `3fbf310`). Atlas completeness and frozen ICI citation: [`PROTOCOL-ATLAS.md`](../PROTOCOL-ATLAS.md) (git `2a74270`). Pass/fail: [`KILL.md`](../KILL.md), [`KILL-ATLAS.md`](../KILL-ATLAS.md). Operator notes: `research/`. Public lock: [OSF Secondary Data Preregistration `c8kpx`](https://osf.io/c8kpx) ([doi:10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX)).
+**Protocols.** Kill confirmatory methods: `PROTOCOL.md` (git `3fbf310`; https://github.com/cauld/scendo/tree/3fbf310870c57247163edca35ed536ade3ea4301). Atlas completeness and frozen ICI citation: `PROTOCOL-ATLAS.md` (git `2a74270`; https://github.com/cauld/scendo/tree/2a74270a16685cbc4df5c45c293a7afb5b7665f5). Pass/fail: `KILL.md`, `KILL-ATLAS.md`. Operator notes: `research/`. Public lock: OSF Secondary Data Preregistration, https://doi.org/10.17605/OSF.IO/C8KPX.
 
-**scRNA.** CELLxGENE Census human RNA, version `2025-11-08`, `is_primary_data == True`, culture/organoid/cell-line drop as in the detection unit. One cancer type per query. BLCA fallback is TISCH2 `BLCA_GSE130001` cell types matched to GEO `GSE130001` counts. Lineage buckets are a locked substring map on existing labels (B/plasma, myeloid, T/NK, malignant/epithelial, stromal/other). Cell score = available-case mean of the nine core genes on raw counts (min 7/9).
+**scRNA.** CELLxGENE Census human RNA, version `2025-11-08`, `is_primary_data == True`, culture/organoid/cell-line drop as in the detection unit. One cancer type per query. BLCA fallback is TISCH2 `BLCA_GSE130001` cell types matched to GEO GSE130001 counts. Lineage buckets are a locked substring map on existing labels (B/plasma, myeloid, T/NK, malignant/epithelial, stromal/other). Cell score = available-case mean of the nine core genes on raw counts (min 7/9).
 
-**Bulk confound.** TOIL `tcga_RSEM_gene_tpm` as shipped. Within-window gene-wise z-scores; available-case mean. B-cell list `MS4A1, CD19, CD79A, CD79B, MZB1`; TLS `CXCL13, CCL19, CCL21, CCR7`. Pearson |r| < 0.6 in pooled TCGA and TCGA-BLCA.
+**Bulk confound.** TOIL `tcga_RSEM_gene_tpm` as shipped. Within-window gene-wise z-scores; available-case mean. B-cell list: *MS4A1*, *CD19*, *CD79A*, *CD79B*, *MZB1*. TLS: *CXCL13*, *CCL19*, *CCL21*, *CCR7*. Pearson |r| < 0.6 in pooled TCGA and TCGA-BLCA.
 
 **ICI.** IMvigor210 from `IMvigor210CoreBiologies_1.0.1` `cds` object. DESeq size-factor normalized counts, `log2(norm + 1)`, within-cohort z-scores, available-case mean. Endpoint `binaryResponse` CR/PR vs SD/PD; drop NE/NA. Model 1 logistic as specified. VIF from OLS auxiliary regressions on the four scores. GEO GSE78220 and GSE91061: pre-treatment anti-PD-1 melanoma, `log2(FPKM + 1)` then the same scoring; Model 1 if covariates exist. No new ICI cohort, gene, cutoff, or refit in the atlas phase.
 
@@ -100,9 +101,9 @@ What this study may still say is listed in `CLAIMS.md`: cell states, a non-B sta
 
 ## Data and code
 
-Public data only. Census, TISCH2/GEO BLCA, TCGA/TOIL Xena, IMvigor210, GSE78220, and GSE91061 remain under their original licenses. Pipeline: `pipeline/` in this repository (Python, [uv](https://docs.astral.sh/uv/)). Study text is CC BY 4.0. Confirmatory freeze SHAs are recorded in [`STATUS.md`](../STATUS.md). Preregistration: [osf.io/c8kpx](https://osf.io/c8kpx).
+Public data only. Census, TISCH2/GEO BLCA, TCGA/TOIL Xena, IMvigor210, GSE78220, and GSE91061 remain under their original licenses. Pipeline: `pipeline/` in https://github.com/cauld/scendo (Python, uv). Study text is CC BY 4.0. Confirmatory freeze SHAs are recorded in `STATUS.md`. Preregistration: https://doi.org/10.17605/OSF.IO/C8KPX.
 
-Reproduce: `uv sync`, then the unit runners under `pipeline/` (`inventory_00.py` … `figures_13.py`). Large data files are gitignored (`data/`). Pins and checksums: [`research/data-inventory.md`](../research/data-inventory.md).
+Reproduce: `uv sync`, then the unit runners under `pipeline/` (`inventory_00.py` … `figures_13.py`). Large data files are not in git (`data/`). Pins and checksums: `research/data-inventory.md`.
 
 ## Competing interests
 
@@ -110,10 +111,10 @@ The author declares no competing interests.
 
 ## References (datasets)
 
-- Auld, C. (2026). SCENDO: single-cell endocannabinoidome states and immune-checkpoint response after B-cell/TLS adjustment. OSF. [https://doi.org/10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX).
-- CELLxGENE Census, version `2025-11-08` (CZI).  
-- TISCH2 `BLCA_GSE130001` cell types with GEO `GSE130001` counts.  
-- TOIL TCGA `tcga_RSEM_gene_tpm` via Xena.  
-- Mariathasan et al., IMvigor210 (`IMvigor210CoreBiologies` 1.0.1).  
-- Hugo et al., Cell 2016, GEO GSE78220.  
+- Auld, C. (2026). SCENDO: single-cell endocannabinoidome states and immune-checkpoint response after B-cell/TLS adjustment. OSF. https://doi.org/10.17605/OSF.IO/C8KPX.
+- CELLxGENE Census, version `2025-11-08` (CZI).
+- TISCH2 `BLCA_GSE130001` cell types with GEO GSE130001 counts.
+- TOIL TCGA `tcga_RSEM_gene_tpm` via Xena.
+- Mariathasan et al., IMvigor210 (`IMvigor210CoreBiologies` 1.0.1).
+- Hugo et al., Cell 2016, GEO GSE78220.
 - Riaz et al., Cell 2017, GEO GSE91061.

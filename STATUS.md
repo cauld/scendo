@@ -4,8 +4,8 @@
 **Flow:** [`.seal/E2E_FLOW.md`](.seal/E2E_FLOW.md) (generic) · [`E2E_FLOW.md`](E2E_FLOW.md) (this study)  
 **Protocol seal:** **SEALED 2026-08-24** (kill) · **SEALED 2026-08-24** (atlas)  
 **Confirmatory git SHA:** kill `3fbf310870c57247163edca35ed536ade3ea4301` (`3fbf310`) · atlas `2a74270a16685cbc4df5c45c293a7afb5b7665f5` (`2a74270`)  
-**OSF URL:** submitted 2026-08-24 17:04 (MDT) — **pending registration approval** (Secondary Data Preregistration, Chad Auld). Public URL after OSF approves; paste it here. Do **not** edit that registration to match results.  
-**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–14 **complete**. Gates D, E, F **pass**. **Atlas Decide: paper as written.** **Scribe complete.** **Archive complete** ([`EXPLORE.md`](EXPLORE.md)). Manuscript: [`docs/manuscript.md`](docs/manuscript.md). Numbers: [`RESULTS.md`](RESULTS.md). **Human remaining:** wait for OSF approval (paste URL here) + optional preprint/journal click (see below).  
+**OSF URL:** https://osf.io/c8kpx (DOI [10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX)). Secondary Data Preregistration, Chad Auld. Registered 2026-08-24. Public. Do **not** edit that registration to match results.  
+**Current stage:** Kill test **complete**. **Decision: atlas-only; ICI reported negative.** Atlas protocol **sealed**. Units 10–14 **complete**. Gates D, E, F **pass**. **Atlas Decide: paper as written.** **Scribe complete.** **Archive complete** ([`EXPLORE.md`](EXPLORE.md)). OSF prereg **public**. Manuscript: [`docs/manuscript.md`](docs/manuscript.md). Numbers: [`RESULTS.md`](RESULTS.md). **Human remaining:** optional preprint/journal (see below).  
 **Order / what to run:** [`docs/SEAL-FLOW.md`](docs/SEAL-FLOW.md)  
 **Decision:** **atlas-only** (2026-08-24). **Atlas paper as written** (2026-08-25): core + expansion; ICI chapter stays negative. Scribe ≤ `CLAIMS.md` non-claims + atlas frozen negative.
 
@@ -24,7 +24,7 @@
 | 2026-08-24 | Analyze nits applied; Units 01–08 packets written |
 | 2026-08-24 | Human confirmed CLAIMS / KILL / PROTOCOL; seal patches (MS4A1 fallback; Unit 05 tie cascade) |
 | 2026-08-24 | **Protocol sealed** at git SHA `3fbf310870c57247163edca35ed536ade3ea4301` |
-| 2026-08-24 | OSF Secondary Data Preregistration **submitted** 17:04 MDT (pending approval). Before ICI models (`c1a47f9` 21:32). Do not amend that registration |
+| 2026-08-24 | OSF Secondary Data Preregistration **submitted** 17:04 MDT. Before ICI models (`c1a47f9` 21:32). Do not amend that registration |
 | 2026-08-24 | Unit 00 inventory: sources reachable; IMvigor 9/9 ECS; Census 4/5 types (BLCA → TISCH2); no outcome peek |
 | 2026-08-24 | Unit 01 detection table: 5 types; stop-kill detection half **false**; human marks Gate C |
 | 2026-08-24 | Human Gate C: **pass / continue**. Unit 02 scRNA states: 3 candidate buckets (B/plasma, malignant/epithelial, stromal/other); two-lineage rule holds; no contamination drops |
@@ -51,8 +51,9 @@
 | 2026-08-25 | Human Gate F: **pass**. ICI numbers = Units 06–07; no new model, cutoff, gene, or cohort. Human Decide next |
 | 2026-08-25 | **Decide: atlas paper as written** (core + expansion; ICI negative chapter). Full paper closed. Scribe next |
 | 2026-08-25 | **Scribe:** `RESULTS.md` + `docs/manuscript.md`. Named-state map + frozen ICI negative. Bound held. Optional Archive / OSF next |
-| 2026-08-25 | **Archive:** leftovers and closed paths in `EXPLORE.md`. Confirmatory loop done. OSF URL still not posted |
+| 2026-08-25 | **Archive:** leftovers and closed paths in `EXPLORE.md`. Confirmatory loop done |
 | 2026-08-25 | Shipping packet: `CITATION.cff`, README landing, OSF after-Decide wording, `docs/manuscript.html` / `.docx` |
+| 2026-08-27 | OSF registration **public:** https://osf.io/c8kpx (DOI 10.17605/OSF.IO/C8KPX). Registered 2026-08-24. Pasted into STATUS. Do not amend |
 
 ## Analyze (2026-08-24)
 
@@ -119,14 +120,14 @@ After **atlas** seal: same rule for `PROTOCOL-ATLAS.md` / `KILL-ATLAS.md`. Kill 
 - [x] Analyze pass (consistency) recorded below
 - [x] Human reads `CLAIMS.md`, `KILL.md`, `PROTOCOL.md` and agrees
 - [x] Seal date + git SHA + “do not edit confirmatory fields” (`3fbf310870c57247163edca35ed536ade3ea4301`)
-- [x] OSF secondary-data prereg **submitted** 2026-08-24 17:04 MDT (pending approval). Public URL not yet — paste when OSF approves.
+- [x] OSF secondary-data prereg **public:** https://osf.io/c8kpx (DOI 10.17605/OSF.IO/C8KPX). Submitted 2026-08-24 17:04 MDT; registered 2026-08-24. Do not amend.
 
 ## Human remaining (not agent-clickable)
 
-Do not reopen Gate B. Paste OSF URL into this file only.
+Do not reopen Gate B.
 
-- [x] **OSF kill prereg.** Submitted 2026-08-24 17:04 MDT. Status: pending registration approval. **Do not update** the confirmatory text. When it is public, paste the `osf.io/…` URL into the STATUS header and one ledger row.
-- [ ] **Preprint (optional).** bioRxiv/medRxiv: your ORCID, affiliation, competing-interests confirm, PDF/DOCX of [`docs/manuscript.md`](docs/manuscript.md). Cite the OSF registration once it has a public URL. Do not add new ICI models.
+- [x] **OSF kill prereg.** Public: https://osf.io/c8kpx (DOI [10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX)). Registered 2026-08-24. **Do not update** the confirmatory text.
+- [ ] **Preprint (optional).** bioRxiv only (not medRxiv): ORCID, Independent researcher, competing-interests confirm. Upload [`docs/manuscript-biorxiv.pdf`](docs/manuscript-biorxiv.pdf). Cite OSF ([`osf.io/c8kpx`](https://osf.io/c8kpx)). Do not add new ICI models.
 - [ ] **Journal (optional).** Same manuscript; claims ceiling still [`CLAIMS.md`](CLAIMS.md).
 
 ## After seal (execution)
@@ -172,7 +173,7 @@ May say, inside `CLAIMS.md`:
 
 Must not say: cannabis/CBD treats cancer; CB2 **is** a clinical checkpoint; patients should change cannabis during PD-1; melanoma GEO validates a biomarker; an OS-only or unadjusted signal is a checkpoint association.
 
-**Next (Phase 2b):** **Archive complete.** Leftovers in [`EXPLORE.md`](EXPLORE.md). Paper: [`RESULTS.md`](RESULTS.md) · [`docs/manuscript.md`](docs/manuscript.md). OSF prereg may still go up. Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay in `EXPLORE.md` unless a protocol is amended to name them. Do not promote myeloid / T/NK catalog rows. Stromal subtypes stay display-only.
+**Next (Phase 2b):** **Archive complete.** Leftovers in [`EXPLORE.md`](EXPLORE.md). Paper: [`RESULTS.md`](RESULTS.md) · [`docs/manuscript.md`](docs/manuscript.md). OSF prereg: https://osf.io/c8kpx. Do not reopen ICI outcomes to hunt a pass. GSE220635 / browser / scGPT stay in `EXPLORE.md` unless a protocol is amended to name them. Do not promote myeloid / T/NK catalog rows. Stromal subtypes stay display-only.
 
 ## Atlas lock (Phase 2b)
 
@@ -190,7 +191,7 @@ Sealed: [`PROTOCOL-ATLAS.md`](PROTOCOL-ATLAS.md) · [`KILL-ATLAS.md`](KILL-ATLAS
 - [x] Unit 13 stromal figures complete: `research/13-stromal-figures.md`. Display-only Stromal/other composition (11 types); stromal n matches Units 10/12. Heatmaps of confirmatory tables. No UMAP / clustering / ICI. Primary **Stromal/other** unchanged.
 - [x] Unit 14 converge + frozen ICI complete: `research/14-atlas-converge.md`. Human Gate F: **pass**. ICI = Units 06–07; no refit. **Decide: atlas paper as written.**
 - [x] Scribe complete: [`RESULTS.md`](RESULTS.md) · [`docs/manuscript.md`](docs/manuscript.md). Named-state map + frozen ICI negative. Bound ≤ `CLAIMS.md` + `PROTOCOL-ATLAS.md`.
-- [x] Archive complete: [`EXPLORE.md`](EXPLORE.md). Closed paths, parked methods, Census near-misses, follow-ups. OSF URL still not posted.
+- [x] Archive complete: [`EXPLORE.md`](EXPLORE.md). Closed paths, parked methods, Census near-misses, follow-ups. OSF: https://osf.io/c8kpx.
 
 ## Atlas Converge (2026-08-25)
 

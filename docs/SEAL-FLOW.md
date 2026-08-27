@@ -1,6 +1,6 @@
 # SEAL flow — what order, what to run
 
-Look here when the sequence is unclear. **You are here** is always `STATUS.md`. Today: atlas protocol **SEALED**. Kill done (A pass, B fail, Decide atlas-only). Gates D, E, F **pass**. Units 10–14 **done**. Decide: atlas paper as written. Scribe complete. **Archive complete.** OSF prereg may still go up.
+Look here when the sequence is unclear. **You are here** is always `STATUS.md`. Today: atlas protocol **SEALED**. Kill done (A pass, B fail, Decide atlas-only). Gates D, E, F **pass**. Units 10–14 **done**. Decide: atlas paper as written. Scribe complete. **Archive complete.** OSF prereg **public:** [osf.io/c8kpx](https://osf.io/c8kpx).
 
 Generic kernel: [`.seal/E2E_FLOW.md`](../.seal/E2E_FLOW.md). This study: [`E2E_FLOW.md`](../E2E_FLOW.md). Chat cheat-sheet: [`.seal/workflows.md`](../.seal/workflows.md).
 
@@ -29,10 +29,10 @@ Kill units 00–08 done. Atlas Units 10–14 done. Decide: atlas paper as writte
 | **Protocol** | Atlas lock | **Done** — `PROTOCOL-ATLAS.md` (kill `PROTOCOL.md` untouched) |
 | Explore / Question / Kill | Kill phase done | Do not re-open Gate B |
 
-OSF prereg can go up any time after the kill git SHA. Browser / scGPT / GSE220635 stay in `EXPLORE.md`.
+OSF prereg is public: [osf.io/c8kpx](https://osf.io/c8kpx) (DOI [10.17605/OSF.IO/C8KPX](https://doi.org/10.17605/OSF.IO/C8KPX)). Browser / scGPT / GSE220635 stay in `EXPLORE.md`.
 
 ## What to run right now
 
-![What to run: loop complete; OSF optional](diagrams/what-to-run.png)
+![What to run: loop complete; OSF public](diagrams/what-to-run.png)
 
-The confirmatory loop is finished. Do not reopen ICI outcomes. Do not promote myeloid / T/NK catalog rows. Stromal subtypes stay display-only. Optional: post kill SHA `3fbf310` to OSF.
+The confirmatory loop is finished. Do not reopen ICI outcomes. Do not promote myeloid / T/NK catalog rows. Stromal subtypes stay display-only. Optional: preprint or journal; cite [osf.io/c8kpx](https://osf.io/c8kpx).

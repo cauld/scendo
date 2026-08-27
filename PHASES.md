@@ -12,7 +12,7 @@ Generic loop: [`.seal/E2E_FLOW.md`](.seal/E2E_FLOW.md). Study instantiation: [`E
 | 0.4 | Clarify | **Done 2026-08-24**; **patched** same day after validation (see `PROTOCOL.md` amendments) |
 | 0.5 | Analyze | **Pass 2026-08-24** — note in `STATUS.md` |
 | 0.5b | Unit 00 inventory | Access + gene coverage; **no ICI peek**; run blocker for Units 01–08 |
-| 0.6 | **Seal** (human) | **Done 2026-08-24** — git SHA in `STATUS.md` (OSF may follow) |
+| 0.6 | **Seal** (human) | **Done 2026-08-24** — git SHA in `STATUS.md`; OSF [osf.io/c8kpx](https://osf.io/c8kpx) |
 
 **Exit:** Kill protocol sealed. Agent will not edit CONFIRMATORY sections.
 
@@ -53,7 +53,7 @@ Chosen 2026-08-24. Atlas lock **sealed**:
 
 **Must not:** reopen Gate B; add confirmatory ECS genes; browser / scGPT / GSE220635 unless a later amendment names them.
 
-**Exit:** **Taken 2026-08-25.** Atlas paper as written. Scribe complete. Archive complete. OSF prereg may still go up.
+**Exit:** **Taken 2026-08-25.** Atlas paper as written. Scribe complete. Archive complete. OSF prereg public: [osf.io/c8kpx](https://osf.io/c8kpx).
 
 ## Phase 2c — Full paper (if A and B pass)
 
